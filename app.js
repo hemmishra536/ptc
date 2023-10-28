@@ -20,6 +20,51 @@ const allQuestionsArr = [
     options:['A','B','C', 'D'],
     answer: 0
   },
+  {
+    q: '123',
+    options:['A','B','C', 'D'],
+    answer: 0
+  },
+  {
+    q: '123',
+    options:['A','B','C', 'D'],
+    answer: 0
+  },
+  {
+    q: '123',
+    options:['A','B','C', 'D'],
+    answer: 0
+  },
+  {
+    q: '123',
+    options:['A','B','C', 'D'],
+    answer: 0
+  },
+  {
+    q: '123',
+    options:['A','B','C', 'D'],
+    answer: 0
+  },
+  {
+    q: '123',
+    options:['A','B','C', 'D'],
+    answer: 0
+  },
+  {
+    q: '123',
+    options:['A','B','C', 'D'],
+    answer: 0
+  },
+  {
+    q: '123',
+    options:['A','B','C', 'D'],
+    answer: 0
+  },
+  {
+    q: '123',
+    options:['A','B','C', 'D'],
+    answer: 0
+  },
   
 ];
 
