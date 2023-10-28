@@ -33,13 +33,13 @@ let allQuestions = [...allQuestionsArr];
 let theRandomQuestions = [];
 
 function selectQuestions() {
-  if (allQuestions.length < 100) {
+  if (allQuestions.length < 10) {
     allQuestions = [...allQuestionsArr];
   };
   
   theRandomQuestions = [];
 
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 10; i++) {
     let randomQuestion = Math.floor(Math.random() * allQuestions.length);
 
     theRandomQuestions.push(allQuestions[randomQuestion]);
