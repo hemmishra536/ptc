@@ -1,0 +1,2896 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" prefix="dc: http://purl.org/dc/elements/1.1/">
+<head><meta name="author" content="Created with Hot Potatoes by Half-Baked Software, registered to HEMANT."/><meta name="keywords" content="Hot Potatoes, Hot Potatoes, Half-Baked Software, Windows, University of Victoria"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+<meta name="dc:creator" content="HEMANT" />
+
+
+
+<title>
+
+</title>
+
+<!-- Made with executable version 7.0 Release 3 Build 0 -->
+
+<!-- The following insertion allows you to add your own code directly to this head tag from the configuration screen -->
+
+
+
+<style>
+
+
+/* This is the CSS stylesheet used in the exercise. */
+/* Elements in square brackets are replaced by data based on configuration settings when the exercise is built. */
+
+/* BeginCorePageCSS */
+
+/* Made with executable version 7.0 Release 3 Build 0 */
+
+
+
+/* CSS variables for colours. */
+:root{
+	--strFontFace:       Geneva,Arial,sans-serif;
+	--strFontSize:       medium;
+	--strTextColor:      #ff0000;
+	--strTitleColor:     #000000;
+
+	--strFuncLightColor: #ffffff;
+	--strFuncShadeColor: #7f7f7f;
+	--strLinkColor:      #00ff80;
+	--strVLinkColor:     #0000CC;
+	
+	--strNavBarColor:    #00ff00;
+	--strNavLightColor:  #7fff7f;
+	--strNavShadeColor:  #007f00;
+	--strNavTextColor:   #ffffff;
+	
+	--strPageBGColor:    #ffffff;
+	--strExBGColor:      #ffffff;
+}
+
+body{
+	font-family: var(--strFontFace);
+	background-color: var(--strPageBGColor);
+	color: var(--strTextColor);
+ 
+	margin-right: 5%;
+	margin-left: 5%;
+	font-size: var(--strFontSize);
+	padding-bottom: 0.5em;
+}
+
+p{
+	text-align: left;
+	margin: 0px;
+	font-size: 1em;
+}
+
+table,div,span,td{
+	font-size: 1em;
+	color: var(--strTextColor);
+}
+
+div.Titles{
+	padding: 0.5em;;
+	text-align: center;
+	color: var(--strTitleColor);
+}
+
+button{
+	font-family: var(--strFontFace);
+	font-size: 1em;
+	display: inline;
+}
+
+.ExerciseTitle{
+	font-size: 140%;
+	color: var(--strTitleColor);
+}
+
+.ExerciseSubtitle{
+	font-size: 120%;
+	color: var(--strTitleColor);
+}
+
+div.StdDiv, div.ExerciseContainer, div.ReadingContainer{
+	background-color: var(--strExBGColor);
+	text-align: center;
+	font-size: 1em;
+	color: var(--strTextColor);
+	padding: 0.5em;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	border-color: var(--strTextColor);
+	margin-bottom: 1px;
+}
+
+div.ReadingContainer, div.ExerciseContainer{
+	min-width: 15em;
+	flex-grow: 1;
+	flex-basis: 0;
+	margin: 1px;
+}
+
+div#ContainerDiv{
+	margin: -1px;
+	padding: 0;
+	border: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+/* EndCorePageCSS */
+
+.RTLText{
+	text-align: right;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", var(--strFontFace); 
+}
+
+.CentredRTLText{
+	text-align: center;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", var(--strFontFace); 
+}
+
+button p.RTLText{
+	text-align: center;
+}
+
+.RTLGapBox{
+	text-align: right;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Times New Roman", var(--strFontFace);
+}
+
+.Guess{
+	font-weight: bold;
+}
+
+.CorrectAnswer{
+	font-weight: bold;
+}
+
+div#Timer{
+	padding: 0.25em;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	color: var(--strTitleColor);
+}
+
+span#TimerText{
+	padding: 0.25em;
+	border-width: 1px;
+	border-style: solid;
+	font-weight: bold;
+	display: none;
+	color: var(--strTitleColor);
+}
+
+span.Instructions{
+
+}
+
+div.ExerciseText{
+
+}
+
+.FeedbackText, .FeedbackText span.CorrectAnswer, .FeedbackText span.Guess, .FeedbackText span.Answer{
+	color: var(--strTitleColor);
+}
+
+.LeftItem{
+	font-size: 1em;
+	color: var(--strTextColor);
+	text-align: left;
+}
+
+.RightItem{
+	font-weight: bold;
+	font-size: 1em;
+	color: var(--strTextColor);
+	text-align: left;
+}
+
+span.CorrectMark{
+
+}
+
+input, textarea{
+	font-family: var(--strFontFace);
+	font-size: 120%;
+}
+
+select{
+	font-size: 1em;
+}
+
+div.Feedback {
+	background-color: var(--strPageBGColor);
+	left: 33%;
+	width: 34%;
+	top: 33%;
+	z-index: 1;
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px;
+	text-align: center;
+	color: var(--strTitleColor);
+	position: absolute;
+	display: none;
+	font-size: 1em;
+}
+
+
+
+
+div.ExerciseDiv{
+	color: var(--strTextColor);
+}
+
+/* JMatch standard output table. */
+table.MatchTable{
+	margin: 2em auto; 
+	border-width: 0;
+}
+
+/* JMatch flashcard styles */
+table.FlashcardTable{
+	background-color: transparent;
+	color: var(--strTextColor);
+	border-color: var(--strTextColor);
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	/*width: 90%;*/
+	position: relative;
+	text-align: center;
+	padding: 0px;
+}
+
+table.FlashcardTable tr{
+	border-style: none;
+	margin: 0px;
+	padding: 0px;
+	background-color: var(--strExBGColor);
+}
+
+table.FlashcardTable td.Showing{
+	font-size: 140%;
+	text-align: center;
+	width: 50%;
+	display: table-cell;
+	padding: 2em;
+	margin: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0.5em;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strNavShadeColor);
+	background-color: var(--strPageBGColor);
+}
+
+table.FlashcardTable td.Hidden{
+	display: none;
+}
+
+/* JMix styles */
+div.JMixDrag, div.JMatchDrag{
+	padding: 0;
+	background-color: var(--strPageBGColor);
+	border-style: none;
+}
+
+div#GuessDiv{
+	padding: 0.5em;
+	margin-bottom: 2em;
+}
+
+div#SegmentDiv{
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-align: center;
+}
+
+a.ExSegment{
+	font-size: 120%;
+	font-weight: bold;
+	text-decoration: none;
+	color: var(--strTextColor);
+	display: inline-block;
+	padding: 0.5em;
+	border: solid 1pt gray;
+	margin-bottom: 0.5em;
+}
+
+span.RemainingWordList{
+	font-style: italic;
+}
+
+div.DropLine {
+	position: absolute;
+	text-align: left;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: var(--strTitleColor);
+	width: 80%;
+	left: 10%;
+}
+
+/* JCloze styles */
+
+.ClozeWordList{
+	text-align: center;
+	font-weight: bold;
+}
+
+div.ClozeBody{
+	text-align: left;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	line-height: 2.0
+}
+
+span.GapSpan{
+	font-weight: bold;
+}
+
+/* JCross styles */
+
+table.CrosswordGrid{
+	margin: auto auto 1em auto;
+	border-collapse: collapse;
+	padding: 0px;
+	background-color: #000000;
+}
+
+table.CrosswordGrid tbody tr td{
+	width: 1.5em;
+	height: 1.5em;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 140%;
+	padding: 1px;
+	margin: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000000;
+	color: #000000;
+}
+
+table.CrosswordGrid span{
+	color: #000000;
+}
+
+table.CrosswordGrid td.BlankCell{
+	background-color: #000000;
+	color: #000000;
+}
+
+table.CrosswordGrid td.LetterOnlyCell{
+	text-align: center;
+	vertical-align: middle;
+	background-color: #ffffff;
+	color: #000000;
+	font-weight: bold;
+}
+
+table.CrosswordGrid td.NumLetterCell{
+	text-align: left;
+	vertical-align: top;
+	background-color: #ffffff;
+	color: #000000;
+	padding: 1px;
+	font-weight: bold;
+}
+
+.NumLetterCellText{
+	cursor: pointer;
+	color: #000000;
+}
+
+.GridNum{
+	vertical-align: super;
+	font-size: 66%;
+	font-weight: bold;
+	text-decoration: none;
+	color: #000000;
+}
+
+.GridNum:hover, .GridNum:visited{
+	color: #000000;
+}
+
+table#Clues{
+	margin: auto;
+	vertical-align: top;
+}
+
+table#Clues td{
+	vertical-align: top;
+}
+
+table.ClueList{
+  margin: auto;
+}
+
+td.ClueNum{
+	text-align: right;
+	font-weight: bold;
+	vertical-align: top;
+}
+
+td.Clue{
+	text-align: left;
+}
+
+div#ClueEntry{
+	text-align: left;
+	margin-bottom: 1em;
+}
+
+/* Keypad styles */
+
+div.Keypad{
+	text-align: center;
+	display: none; /* initially hidden, shown if needed */
+	margin-bottom: 0.5em;
+}
+
+div.Keypad button{
+	font-family: var(--strFontFace);
+	font-size: 120%;
+	background-color: #ffffff;
+	color: #000000;
+	width: 2em;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0.5em;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
+}
+
+/* JQuiz styles */
+
+div.QuestionNavigation{
+	text-align: center;
+}
+
+.QNum{
+	margin: 0em 1em 0.5em 1em;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+textarea{
+	font-family: var(--strFontFace);
+}
+
+.QuestionText{
+	text-align: left;
+	margin: 0px;
+	font-size: 1em;
+}
+
+.Answer{
+	font-size: 120%;
+}
+
+.PartialAnswer{
+	font-size: 120%;
+	letter-spacing: 0.1em;
+	color: var(--strTitleColor);
+}
+
+.Highlight{
+	color: #000000;
+	background-color: #ffff00;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+ol.QuizQuestions{
+	text-align: left;
+	list-style-type: none;
+}
+
+li.QuizQuestion{
+	padding: 1em;
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+}
+
+ol.MCAnswers{
+	text-align: left;
+	list-style-type: upper-alpha;
+	padding: 1em;
+}
+
+ol.MCAnswers li{
+	margin-bottom: 1em;
+}
+
+ol.MSelAnswers{
+	text-align: left;
+	list-style-type: lower-alpha;
+	padding: 1em;
+}
+
+div.ShortAnswer{
+	padding: 1em;
+}
+
+.FuncButton {
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 3em;
+
+	border-left-color: var(--strFuncLightColor);
+	border-top-color: var(--strFuncLightColor);
+	border-right-color: var(--strFuncShadeColor);
+	border-bottom-color: var(--strFuncShadeColor);
+	color: var(--strTextColor);
+	background-color: var(--strExBGColor);
+
+	border-width: 1pt;
+	cursor: pointer;	
+	box-shadow: 0.2em 0.3em 0.2em var(--strFuncShadeColor);
+}
+
+.FuncButton:active {
+	box-shadow: none;
+}
+
+.FuncButton:hover{
+	color: var(--strExBGColor);
+	background-color: var(--strTextColor);
+}
+
+/*BeginNavBarStyle*/
+
+div.NavButtonBar{
+	background-color: var(--strNavBarColor);
+	text-align: center;
+	margin: 0.25rem 0;
+	clear: both;
+	font-size: 1em;
+	padding: 0.2em;
+	box-sizing: border-box;
+}
+
+.NavButton {
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 3em;
+	
+	border-left-color: var(--strNavLightColor);
+	border-top-color: var(--strNavLightColor);
+	border-right-color: var(--strNavShadeColor);
+	border-bottom-color: var(--strNavShadeColor); 
+	background-color: var(--strNavBarColor);
+	color: var(--strNavTextColor);
+
+	border-width: 1pt;
+	cursor: pointer;	
+	box-shadow: 0.2em 0.3em 0.2em var(--strNavShadeColor);
+}
+
+.NavButton:active {
+	box-shadow: none;
+}
+
+.NavButton:hover{
+	color: var(--strNavBarColor);
+	background-color: var(--strNavTextColor);
+}
+
+/*EndNavBarStyle*/
+
+a{
+	color: var(--strLinkColor);
+}
+
+a:visited{
+	color: var(--strVLinkColor);
+}
+
+a:hover{
+	color: var(--strLinkColor);
+}
+
+div.CardStyle {
+	position: absolute;
+	font-family: var(--strFontFace);
+	font-size: 1em;
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 2em;
+	border-width: 1pt;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
+	background-color: var(--strExBGColor);
+	left: -50px;
+	top: -50px;
+	overflow: visible;
+	touch-action: none;
+	user-select: none;
+	box-sizing: border-box;
+}
+
+div.CardStyleCentered{
+	text-align: center;
+}
+
+.rtl{
+	text-align: right;
+	font-size: 140%;
+}
+
+
+</style>
+
+<script>
+
+//<![CDATA[
+
+<!--
+
+
+
+
+//CODE FOR HANDLING NAV BUTTONS AND FUNCTION BUTTONS
+
+function FocusAButton(){
+	if (document.getElementById('CheckButton1') != null){
+		document.getElementById('CheckButton1').focus();
+	}
+	else{
+		if (document.getElementById('CheckButton2') != null){
+			document.getElementById('CheckButton2').focus();
+		}
+		else{
+			document.getElementsByTagName('button')[0].focus();
+		}
+	}
+}
+
+
+
+
+//CODE FOR HANDLING DISPLAY OF POPUP FEEDBACK BOX
+
+var topZ = 1000;
+
+function ShowMessage(Feedback){
+	var Output = Feedback + '<br /><br />';
+	document.getElementById('FeedbackContent').innerHTML = Output;
+	var FDiv = document.getElementById('FeedbackDiv');
+	topZ++;
+	FDiv.style.zIndex = topZ;
+	FDiv.style.top = TopSettingWithScrollOffset(30) + 'px';
+
+	FDiv.style.display = 'block';
+
+	ShowElements(false, 'input');
+	ShowElements(false, 'select');
+	ShowElements(false, 'object');
+	ShowElements(true, 'object', 'FeedbackContent');
+
+//Focus the OK button
+	setTimeout("document.getElementById('FeedbackOKButton').focus()", 50);
+	
+//
+//	RefreshImages();
+//
+}
+
+function ShowElements(Show, TagName, ContainerToReverse){
+// added third argument to allow objects in the feedback box to appear
+//IE bug -- hide all the form elements that will show through the popup
+//FF on Mac bug : doesn't redisplay objects whose visibility is set to visible
+//unless the object's display property is changed
+
+	//get container object (by Id passed in, or use document otherwise)
+	TopNode = document.getElementById(ContainerToReverse);
+	var Els;
+	if (TopNode != null) {
+		Els = TopNode.getElementsByTagName(TagName);
+	} else {
+		Els = document.getElementsByTagName(TagName);
+	}
+
+	for (var i=0; i<Els.length; i++){
+		if (TagName == "object") {
+			//manipulate object elements in all browsers
+			if (Show == true){
+				Els[i].style.visibility = 'visible';
+			}
+			else{
+				Els[i].style.visibility = 'hidden';
+			}
+		} 
+	}
+}
+
+
+
+function HideFeedback(){
+	document.getElementById('FeedbackDiv').style.display = 'none';
+	ShowElements(true, 'input');
+	ShowElements(true, 'select');
+	ShowElements(true, 'object');
+}
+
+
+//GENERAL UTILITY FUNCTIONS AND VARIABLES
+
+//PAGE DIMENSION FUNCTIONS
+function PageDim(){
+//Get the page width and height
+	this.W = 600;
+	this.H = 400;
+	this.W = document.getElementsByTagName('body')[0].offsetWidth;
+	this.H = document.getElementsByTagName('body')[0].offsetHeight;
+}
+
+var pg = null;
+
+function GetPageXY(El) {
+	var XY = {x: 0, y: 0};
+	while(El){
+		XY.x += El.offsetLeft;
+		XY.y += El.offsetTop;
+		El = El.offsetParent;
+	}
+	return XY;
+}
+
+function GetScrollTop(){
+	if (typeof(window.pageYOffset) == 'number'){
+		return window.pageYOffset;
+	}
+	else{
+		if ((document.body)&&(document.body.scrollTop)){
+			return document.body.scrollTop;
+		}
+		else{
+			if ((document.documentElement)&&(document.documentElement.scrollTop)){
+				return document.documentElement.scrollTop;
+			}
+			else{
+				return 0;
+			}
+		}
+	}
+}
+
+function GetViewportHeight(){
+	if (typeof window.innerHeight != 'undefined'){
+		return window.innerHeight;
+	}
+	else{
+		if (((typeof document.documentElement != 'undefined')&&(typeof document.documentElement.clientHeight !=
+     'undefined'))&&(document.documentElement.clientHeight != 0)){
+			return document.documentElement.clientHeight;
+		}
+		else{
+			return document.getElementsByTagName('body')[0].clientHeight;
+		}
+	}
+}
+
+function TopSettingWithScrollOffset(TopPercent){
+	var T = Math.floor(GetViewportHeight() * (TopPercent/100));
+	return GetScrollTop() + T; 
+}
+
+//CODE FOR AVOIDING LOSS OF DATA WHEN BACKSPACE KEY INVOKES history.back()
+var InTextBox = false;
+
+function SuppressBackspace(e){ 
+	if (InTextBox == true){return;}
+	thisKey = e.keyCode;
+
+	var Suppress = false;
+
+	if (thisKey == 8) {
+		Suppress = true;
+		e.preventDefault();
+	}
+}
+
+window.addEventListener('keypress',SuppressBackspace,false);
+
+function ReduceItems(InArray, ReduceToSize){
+	var ItemToDump=0;
+	var j=0;
+	while (InArray.length > ReduceToSize){
+		ItemToDump = Math.floor(InArray.length*Math.random());
+		InArray.splice(ItemToDump, 1);
+	}
+}
+
+function Shuffle(InArray){
+	var Num;
+	var Temp = new Array();
+	var Len = InArray.length;
+
+	var j = Len;
+
+	for (var i=0; i<Len; i++){
+		Temp[i] = InArray[i];
+	}
+
+	for (i=0; i<Len; i++){
+		Num = Math.floor(j  *  Math.random());
+		InArray[i] = Temp[Num];
+
+		for (var k=Num; k < (j-1); k++) {
+			Temp[k] = Temp[k+1];
+		}
+		j--;
+	}
+	return InArray;
+}
+
+function WriteToInstructions(Feedback) {
+	document.getElementById('InstructionsDiv').innerHTML = Feedback;
+
+	RefreshImages();
+
+}
+
+
+
+Imgs = new Array();
+
+function PreloadImages(){
+	var a = PreloadImages.arguments;
+	for (var i=0; i<a.length; i++){
+		Imgs[i] = new Image();
+		Imgs[i].src = a[i];
+	}
+}
+
+function RefreshImages(){
+	for (var i=0; i<document.images.length; i++){
+		if (document.images[i].name.substring(0,6) != 'NavBar'){
+			document.images[i].src = document.images[i].src;
+		}
+	}
+}
+
+
+function EscapeDoubleQuotes(InString){
+	return InString.replace(/"/g, '&quot;')
+}
+
+function TrimString(InString){
+        var x = 0;
+
+        if (InString.length != 0) {
+                while ((InString.charAt(InString.length - 1) == '\u0020') || (InString.charAt(InString.length - 1) == '\u000A') || (InString.charAt(InString.length - 1) == '\u000D')){
+                        InString = InString.substring(0, InString.length - 1)
+                }
+
+                while ((InString.charAt(0) == '\u0020') || (InString.charAt(0) == '\u000A') || (InString.charAt(0) == '\u000D')){
+                        InString = InString.substring(1, InString.length)
+                }
+
+                while (InString.indexOf('  ') != -1) {
+                        x = InString.indexOf('  ')
+                        InString = InString.substring(0, x) + InString.substring(x+1, InString.length)
+                 }
+
+                return InString;
+        }
+
+        else {
+                return '';
+        }
+}
+
+function FindLongest(InArray){
+	if (InArray.length < 1){return -1;}
+
+	var Longest = 0;
+	for (var i=1; i<InArray.length; i++){
+		if (InArray[i].length > InArray[Longest].length){
+			Longest = i;
+		}
+	}
+	return Longest;
+}
+
+//SELECTION OBJECT FOR TYPING WITH KEYPAD
+var selObj = null;
+            
+SelObj = function(box){
+	this.box = box;
+	this.selStart = this.box.selectionStart;
+	this.selEnd = this.box.selectionEnd;
+	this.selText = this.box.value.substring(this.selStart, this.selEnd);
+	return this;
+}
+
+function setSelText(newText){
+	var caretPos = this.selStart + newText.length;
+	var newValue = this.box.value.substring(0, this.selStart);
+	newValue += newText;
+	newValue += this.box.value.substring(this.selEnd, this.box.value.length);
+	this.box.value = newValue;
+	this.box.setSelectionRange(caretPos, caretPos);
+	this.box.focus();
+}
+SelObj.prototype.setSelText = setSelText;
+
+function setSelSelectionRange(start, end){
+	this.box.setSelectionRange(start, end);
+}
+SelObj.prototype.setSelSelectionRange = setSelSelectionRange;
+
+//UNICODE CHARACTER FUNCTIONS
+function IsCombiningDiacritic(CharNum){
+	var Result = (((CharNum >= 0x0300)&&(CharNum <= 0x370))||((CharNum >= 0x20d0)&&(CharNum <= 0x20ff)));
+	Result = Result || (((CharNum >= 0x3099)&&(CharNum <= 0x309a))||((CharNum >= 0xfe20)&&(CharNum <= 0xfe23)));
+	return Result;
+}
+
+function IsCJK(CharNum){
+	return ((CharNum >= 0x3000)&&(CharNum < 0xd800));
+}
+
+//SETUP FUNCTIONS
+//BROWSER WILL REFILL TEXT BOXES FROM CACHE IF NOT PREVENTED
+function ClearTextBoxes(){
+	var NList = document.getElementsByTagName('input');
+	for (var i=0; i<NList.length; i++){
+		if ((NList[i].id.indexOf('Guess') > -1)||(NList[i].id.indexOf('Gap') > -1)){
+			NList[i].value = '';
+		}
+		if (NList[i].id.indexOf('Chk') > -1){
+			NList[i].checked = '';
+		}
+	}
+}
+
+
+
+
+
+
+
+//JQUIZ CORE JAVASCRIPT CODE
+
+var CurrQNum = 0;
+var CorrectIndicator = '<div style="background-color:green;color:white;padding:2%;"><b>&#x2714;</b></div>';
+var IncorrectIndicator = '<div style="background-color:red;color:white;padding:2%;"><b>&#x2718;</b></div>';
+var YourScoreIs = 'Your score is ';
+
+//New for 6.2.2.0
+var CompletedSoFar = 'Questions completed so far: ';
+var ExerciseCompleted = 'You have completed the exercise.';
+var ShowCompletedSoFar = true;
+
+var ContinuousScoring = true;
+var CorrectFirstTime = 'Questions answered correctly first time: ';
+var ShowCorrectFirstTime = true;
+var ShuffleQs = false;
+var ShuffleAs = false;
+var DefaultRight = '<div style="background-color:green;color:orange;padding:2%;"><b>correct</b></div>';
+var DefaultWrong = '<div style="background-color:red;color:orange;padding:2%;"><b>wrong</b></div>';
+var QsToShow = 142;
+var Score = 0;
+var Finished = false;
+var Qs = null;
+var QArray = new Array();
+var ShowingAllQuestions = false;
+var ShowAllQuestionsCaption = 'Show all questions';
+var ShowOneByOneCaption = 'Show questions one by one';
+var State = new Array();
+var Feedback = '';
+var TimeOver = false;
+var strInstructions = '';
+var Locked = false;
+
+//The following variable can be used to add a message explaining that
+//the question is finished, so no further marking will take place.
+var strQuestionFinished = '';
+
+function CompleteEmptyFeedback(){
+	var QNum, ANum;
+	for (QNum=0; QNum<I.length; QNum++){
+//Only do this if not multi-select
+		if (I[QNum][2] != '3'){
+  		for (ANum = 0; ANum<I[QNum][3].length; ANum++){
+  			if (I[QNum][3][ANum][1].length < 1){
+  				if (I[QNum][3][ANum][2] > 0){
+  					I[QNum][3][ANum][1] = DefaultRight;
+  				}
+  				else{
+  					I[QNum][3][ANum][1] = DefaultWrong;
+  				}
+  			}
+  		}
+		}
+	}
+}
+
+function SetUpQuestions(){
+	var AList = new Array(); 
+	var QList = new Array();
+	var i, j;
+	Qs = document.getElementById('Questions');
+	while (Qs.getElementsByTagName('li').length > 0){
+		QList.push(Qs.removeChild(Qs.getElementsByTagName('li')[0]));
+	}
+	var DumpItem = 0;
+	if (QsToShow > QList.length){
+		QsToShow = QList.length;
+	}
+	while (QsToShow < QList.length){
+		DumpItem = Math.floor(QList.length*Math.random());
+		for (j=DumpItem; j<(QList.length-1); j++){
+			QList[j] = QList[j+1];
+		}
+		QList.length = QList.length-1;
+	}
+	if (ShuffleQs == true){
+		QList = Shuffle(QList);
+	}
+	if (ShuffleAs == true){
+		var As;
+		for (var i=0; i<QList.length; i++){
+			As = QList[i].getElementsByTagName('ol')[0];
+			if (As != null){
+  			AList.length = 0;
+				while (As.getElementsByTagName('li').length > 0){
+					AList.push(As.removeChild(As.getElementsByTagName('li')[0]));
+				}
+				AList = Shuffle(AList);
+				for (j=0; j<AList.length; j++){
+					As.appendChild(AList[j]);
+				}
+			}
+		}
+	}
+	
+	for (i=0; i<QList.length; i++){
+		Qs.appendChild(QList[i]);
+		QArray[QArray.length] = QList[i];
+	}
+
+//Show the first item
+	QArray[0].style.display = '';
+	
+//Now hide all except the first item
+	for (i=1; i<QArray.length; i++){
+		QArray[i].style.display = 'none';
+	}		
+	SetQNumReadout();
+	
+	SetFocusToTextbox();
+}
+
+function SetFocusToTextbox(){
+//if there's a textbox, set the focus in it
+	if (QArray[CurrQNum].getElementsByTagName('input')[0] != null){
+		QArray[CurrQNum].getElementsByTagName('input')[0].focus();
+//and show a keypad if there is one
+		if (document.getElementById('CharacterKeypad') != null){
+			document.getElementById('CharacterKeypad').style.display = 'block';
+		}
+	}
+	else{
+  	if (QArray[CurrQNum].getElementsByTagName('textarea')[0] != null){
+  		QArray[CurrQNum].getElementsByTagName('textarea')[0].focus();	
+//and show a keypad if there is one
+			if (document.getElementById('CharacterKeypad') != null){
+				document.getElementById('CharacterKeypad').style.display = 'block';
+			}
+		}
+//This added for 6.0.4.11: hide accented character buttons if no textbox
+		else{
+			if (document.getElementById('CharacterKeypad') != null){
+				document.getElementById('CharacterKeypad').style.display = 'none';
+			}
+		}
+	}
+}
+
+function ChangeQ(ChangeBy){
+//The following line prevents moving to another question until the current
+//question is answered correctly. Uncomment it to enable this behaviour. 
+//	if (State[CurrQNum][0] == -1){return;}
+	if (((CurrQNum + ChangeBy) < 0)||((CurrQNum + ChangeBy) >= QArray.length)){return;}
+	QArray[CurrQNum].style.display = 'none';
+	CurrQNum += ChangeBy;
+	QArray[CurrQNum].style.display = '';
+//Undocumented function added 10/12/2004
+	ShowSpecialReadingForQuestion();
+	SetQNumReadout();
+	SetFocusToTextbox();
+}
+
+var HiddenReadingShown = false;
+function ShowSpecialReadingForQuestion(){
+//Undocumented function for showing specific reading text elements which change with each question
+//Added on 10/12/2004
+	if (document.getElementById('ReadingDiv') != null){
+		if (HiddenReadingShown == true){
+			document.getElementById('ReadingDiv').innerHTML = '';
+		}
+		if (QArray[CurrQNum] != null){
+//Fix for 6.0.4.25
+			var Children = QArray[CurrQNum].getElementsByTagName('div');
+			for (var i=0; i<Children.length; i++){
+			if (Children[i].className=="HiddenReading"){
+					document.getElementById('ReadingDiv').innerHTML = Children[i].innerHTML;
+					HiddenReadingShown = true;
+//Hide the ShowAllQuestions button to avoid confusion
+					if (document.getElementById('ShowMethodButton') != null){
+						document.getElementById('ShowMethodButton').style.display = 'none';
+					}
+				}
+			}	
+		}
+	}
+}
+
+function SetQNumReadout(){
+	document.getElementById('QNumReadout').innerHTML = (CurrQNum+1) + ' / ' + QArray.length;
+	if ((CurrQNum+1) >= QArray.length){
+		if (document.getElementById('NextQButton') != null){
+			document.getElementById('NextQButton').style.visibility = 'hidden';
+		}
+	}
+	else{
+		if (document.getElementById('NextQButton') != null){
+			document.getElementById('NextQButton').style.visibility = 'visible';
+		}
+	}
+	if (CurrQNum <= 0){
+		if (document.getElementById('PrevQButton') != null){
+			document.getElementById('PrevQButton').style.visibility = 'hidden';
+		}
+	}
+	else{
+		if (document.getElementById('PrevQButton') != null){
+			document.getElementById('PrevQButton').style.visibility = 'visible';
+		}
+	}
+}
+
+var I=new Array();
+I[0]=new Array();I[0][0]=100;
+I[0][1]='';
+I[0][2]='0';
+I[0][3]=new Array();
+I[0][3][0]=new Array('A','',0,0,1);
+I[0][3][1]=new Array('B','',0,0,1);
+I[0][3][2]=new Array('C','',1,100,1);
+I[0][3][3]=new Array('D','',0,0,1);
+I[1]=new Array();I[1][0]=100;
+I[1][1]='';
+I[1][2]='0';
+I[1][3]=new Array();
+I[1][3][0]=new Array('A','',0,0,1);
+I[1][3][1]=new Array('B','',1,100,1);
+I[1][3][2]=new Array('C','',0,0,1);
+I[1][3][3]=new Array('D','',0,0,1);
+I[2]=new Array();I[2][0]=100;
+I[2][1]='';
+I[2][2]='0';
+I[2][3]=new Array();
+I[2][3][0]=new Array('A','',0,0,1);
+I[2][3][1]=new Array('B','',0,0,1);
+I[2][3][2]=new Array('C','',0,0,1);
+I[2][3][3]=new Array('D','',1,100,1);
+I[3]=new Array();I[3][0]=100;
+I[3][1]='';
+I[3][2]='0';
+I[3][3]=new Array();
+I[3][3][0]=new Array('A','',0,0,1);
+I[3][3][1]=new Array('B','',0,0,1);
+I[3][3][2]=new Array('C','',1,100,1);
+I[3][3][3]=new Array('D','',0,0,1);
+I[4]=new Array();I[4][0]=100;
+I[4][1]='';
+I[4][2]='0';
+I[4][3]=new Array();
+I[4][3][0]=new Array('A','',0,0,1);
+I[4][3][1]=new Array('B','',0,0,1);
+I[4][3][2]=new Array('C','',1,100,1);
+I[4][3][3]=new Array('D','',0,0,1);
+I[5]=new Array();I[5][0]=100;
+I[5][1]='';
+I[5][2]='0';
+I[5][3]=new Array();
+I[5][3][0]=new Array('A','',0,0,1);
+I[5][3][1]=new Array('B','',1,100,1);
+I[5][3][2]=new Array('C','',0,0,1);
+I[5][3][3]=new Array('D','',0,0,1);
+I[6]=new Array();I[6][0]=100;
+I[6][1]='';
+I[6][2]='0';
+I[6][3]=new Array();
+I[6][3][0]=new Array('A','',0,0,1);
+I[6][3][1]=new Array('B','',1,100,1);
+I[6][3][2]=new Array('C','',0,0,1);
+I[6][3][3]=new Array('D','',0,0,1);
+I[7]=new Array();I[7][0]=100;
+I[7][1]='';
+I[7][2]='0';
+I[7][3]=new Array();
+I[7][3][0]=new Array('A','',0,0,1);
+I[7][3][1]=new Array('B','',1,100,1);
+I[7][3][2]=new Array('C','',0,0,1);
+I[7][3][3]=new Array('D','',0,0,1);
+I[8]=new Array();I[8][0]=100;
+I[8][1]='';
+I[8][2]='0';
+I[8][3]=new Array();
+I[8][3][0]=new Array('A','',0,0,1);
+I[8][3][1]=new Array('B','',1,100,1);
+I[8][3][2]=new Array('C','',0,0,1);
+I[8][3][3]=new Array('D','',0,0,1);
+I[9]=new Array();I[9][0]=100;
+I[9][1]='';
+I[9][2]='0';
+I[9][3]=new Array();
+I[9][3][0]=new Array('A','',0,0,1);
+I[9][3][1]=new Array('B','',0,0,1);
+I[9][3][2]=new Array('C','',1,100,1);
+I[9][3][3]=new Array('D','',0,0,1);
+I[10]=new Array();I[10][0]=100;
+I[10][1]='';
+I[10][2]='0';
+I[10][3]=new Array();
+I[10][3][0]=new Array('A','',0,0,1);
+I[10][3][1]=new Array('B','',1,100,1);
+I[10][3][2]=new Array('C','',0,0,1);
+I[10][3][3]=new Array('D','',0,0,1);
+I[11]=new Array();I[11][0]=100;
+I[11][1]='';
+I[11][2]='0';
+I[11][3]=new Array();
+I[11][3][0]=new Array('Aincomplete','',1,100,1);
+I[11][3][1]=new Array('B','',0,0,1);
+I[11][3][2]=new Array('C','',0,0,1);
+I[11][3][3]=new Array('D','',0,0,1);
+I[12]=new Array();I[12][0]=100;
+I[12][1]='';
+I[12][2]='0';
+I[12][3]=new Array();
+I[12][3][0]=new Array('A','',1,100,1);
+I[12][3][1]=new Array('B','',0,0,1);
+I[12][3][2]=new Array('C','',0,0,1);
+I[12][3][3]=new Array('D','',0,0,1);
+I[13]=new Array();I[13][0]=100;
+I[13][1]='';
+I[13][2]='0';
+I[13][3]=new Array();
+I[13][3][0]=new Array('A','',0,0,1);
+I[13][3][1]=new Array('B','',0,0,1);
+I[13][3][2]=new Array('C','',1,100,1);
+I[13][3][3]=new Array('D','',0,0,1);
+I[14]=new Array();I[14][0]=100;
+I[14][1]='';
+I[14][2]='0';
+I[14][3]=new Array();
+I[14][3][0]=new Array('A','',0,0,1);
+I[14][3][1]=new Array('B','',1,100,1);
+I[14][3][2]=new Array('C','',0,0,1);
+I[14][3][3]=new Array('D','',0,0,1);
+I[15]=new Array();I[15][0]=100;
+I[15][1]='';
+I[15][2]='0';
+I[15][3]=new Array();
+I[15][3][0]=new Array('A','',0,0,1);
+I[15][3][1]=new Array('B','',1,100,1);
+I[15][3][2]=new Array('C','',0,0,1);
+I[15][3][3]=new Array('D','',0,0,1);
+I[16]=new Array();I[16][0]=100;
+I[16][1]='';
+I[16][2]='0';
+I[16][3]=new Array();
+I[16][3][0]=new Array('A','',1,100,1);
+I[16][3][1]=new Array('B','',0,0,1);
+I[16][3][2]=new Array('C','',0,0,1);
+I[16][3][3]=new Array('D','',0,0,1);
+I[17]=new Array();I[17][0]=100;
+I[17][1]='';
+I[17][2]='0';
+I[17][3]=new Array();
+I[17][3][0]=new Array('A','',0,0,1);
+I[17][3][1]=new Array('B','',0,0,1);
+I[17][3][2]=new Array('C','',0,0,1);
+I[17][3][3]=new Array('D','',1,100,1);
+I[18]=new Array();I[18][0]=100;
+I[18][1]='';
+I[18][2]='0';
+I[18][3]=new Array();
+I[18][3][0]=new Array('A','',0,0,1);
+I[18][3][1]=new Array('B','',0,0,1);
+I[18][3][2]=new Array('C','',0,0,1);
+I[18][3][3]=new Array('D','',1,100,1);
+I[19]=new Array();I[19][0]=100;
+I[19][1]='';
+I[19][2]='0';
+I[19][3]=new Array();
+I[19][3][0]=new Array('A','',1,100,1);
+I[19][3][1]=new Array('B','',0,0,1);
+I[19][3][2]=new Array('C','',0,0,1);
+I[19][3][3]=new Array('D','',0,0,1);
+I[20]=new Array();I[20][0]=100;
+I[20][1]='';
+I[20][2]='0';
+I[20][3]=new Array();
+I[20][3][0]=new Array('A','',1,100,1);
+I[20][3][1]=new Array('B','',0,0,1);
+I[20][3][2]=new Array('C','',0,0,1);
+I[20][3][3]=new Array('D','',0,0,1);
+I[21]=new Array();I[21][0]=100;
+I[21][1]='';
+I[21][2]='0';
+I[21][3]=new Array();
+I[21][3][0]=new Array('A','',0,0,1);
+I[21][3][1]=new Array('B','',1,100,1);
+I[21][3][2]=new Array('C','',0,0,1);
+I[21][3][3]=new Array('D','',0,0,1);
+I[22]=new Array();I[22][0]=100;
+I[22][1]='';
+I[22][2]='0';
+I[22][3]=new Array();
+I[22][3][0]=new Array('A','',0,0,1);
+I[22][3][1]=new Array('B','',0,0,1);
+I[22][3][2]=new Array('C','',0,0,1);
+I[22][3][3]=new Array('D','',1,100,1);
+I[23]=new Array();I[23][0]=100;
+I[23][1]='';
+I[23][2]='0';
+I[23][3]=new Array();
+I[23][3][0]=new Array('A','',0,0,1);
+I[23][3][1]=new Array('B','',1,100,1);
+I[23][3][2]=new Array('C','',0,0,1);
+I[23][3][3]=new Array('D','',0,0,1);
+I[24]=new Array();I[24][0]=100;
+I[24][1]='';
+I[24][2]='0';
+I[24][3]=new Array();
+I[24][3][0]=new Array('A','',0,0,1);
+I[24][3][1]=new Array('B','',0,0,1);
+I[24][3][2]=new Array('C','',1,100,1);
+I[24][3][3]=new Array('D','',0,0,1);
+I[25]=new Array();I[25][0]=100;
+I[25][1]='';
+I[25][2]='0';
+I[25][3]=new Array();
+I[25][3][0]=new Array('A','',0,0,1);
+I[25][3][1]=new Array('B','',0,0,1);
+I[25][3][2]=new Array('C','',0,0,1);
+I[25][3][3]=new Array('D','',1,100,1);
+I[26]=new Array();I[26][0]=100;
+I[26][1]='';
+I[26][2]='0';
+I[26][3]=new Array();
+I[26][3][0]=new Array('A','',1,100,1);
+I[26][3][1]=new Array('B','',0,0,1);
+I[26][3][2]=new Array('C','',0,0,1);
+I[26][3][3]=new Array('D','',0,0,1);
+I[27]=new Array();I[27][0]=100;
+I[27][1]='';
+I[27][2]='0';
+I[27][3]=new Array();
+I[27][3][0]=new Array('A','',0,0,1);
+I[27][3][1]=new Array('B','',0,0,1);
+I[27][3][2]=new Array('C','',1,100,1);
+I[27][3][3]=new Array('D','',0,0,1);
+I[28]=new Array();I[28][0]=100;
+I[28][1]='';
+I[28][2]='0';
+I[28][3]=new Array();
+I[28][3][0]=new Array('A','',0,0,1);
+I[28][3][1]=new Array('B','',0,0,1);
+I[28][3][2]=new Array('C','',1,100,1);
+I[28][3][3]=new Array('D','',0,0,1);
+I[29]=new Array();I[29][0]=100;
+I[29][1]='';
+I[29][2]='0';
+I[29][3]=new Array();
+I[29][3][0]=new Array('A','',0,0,1);
+I[29][3][1]=new Array('B','',0,0,1);
+I[29][3][2]=new Array('C','',0,0,1);
+I[29][3][3]=new Array('D','',1,100,1);
+I[30]=new Array();I[30][0]=100;
+I[30][1]='';
+I[30][2]='0';
+I[30][3]=new Array();
+I[30][3][0]=new Array('A','',0,0,1);
+I[30][3][1]=new Array('B','',0,0,1);
+I[30][3][2]=new Array('C','',1,100,1);
+I[30][3][3]=new Array('D','',0,0,1);
+I[31]=new Array();I[31][0]=100;
+I[31][1]='';
+I[31][2]='0';
+I[31][3]=new Array();
+I[31][3][0]=new Array('A','',1,100,1);
+I[31][3][1]=new Array('B','',0,0,1);
+I[31][3][2]=new Array('C','',0,0,1);
+I[31][3][3]=new Array('D','',0,0,1);
+I[32]=new Array();I[32][0]=100;
+I[32][1]='';
+I[32][2]='0';
+I[32][3]=new Array();
+I[32][3][0]=new Array('A','',0,0,1);
+I[32][3][1]=new Array('B','',0,0,1);
+I[32][3][2]=new Array('C','',0,0,1);
+I[32][3][3]=new Array('D','',1,100,1);
+I[33]=new Array();I[33][0]=100;
+I[33][1]='';
+I[33][2]='0';
+I[33][3]=new Array();
+I[33][3][0]=new Array('A','',1,100,1);
+I[33][3][1]=new Array('B','',0,0,1);
+I[33][3][2]=new Array('C','',0,0,1);
+I[33][3][3]=new Array('D','',0,0,1);
+I[34]=new Array();I[34][0]=100;
+I[34][1]='';
+I[34][2]='0';
+I[34][3]=new Array();
+I[34][3][0]=new Array('A','',0,0,1);
+I[34][3][1]=new Array('B','',1,100,1);
+I[34][3][2]=new Array('C','',0,0,1);
+I[34][3][3]=new Array('D','',0,0,1);
+I[35]=new Array();I[35][0]=100;
+I[35][1]='';
+I[35][2]='0';
+I[35][3]=new Array();
+I[35][3][0]=new Array('A','',0,0,1);
+I[35][3][1]=new Array('B','',0,0,1);
+I[35][3][2]=new Array('C','',0,0,1);
+I[35][3][3]=new Array('D','',1,100,1);
+I[36]=new Array();I[36][0]=100;
+I[36][1]='';
+I[36][2]='0';
+I[36][3]=new Array();
+I[36][3][0]=new Array('A','',0,0,1);
+I[36][3][1]=new Array('B','',0,0,1);
+I[36][3][2]=new Array('C','',0,0,1);
+I[36][3][3]=new Array('D','',1,100,1);
+I[37]=new Array();I[37][0]=100;
+I[37][1]='';
+I[37][2]='0';
+I[37][3]=new Array();
+I[37][3][0]=new Array('A','',0,0,1);
+I[37][3][1]=new Array('B','',0,0,1);
+I[37][3][2]=new Array('C','',1,100,1);
+I[37][3][3]=new Array('D','',0,0,1);
+I[38]=new Array();I[38][0]=100;
+I[38][1]='';
+I[38][2]='0';
+I[38][3]=new Array();
+I[38][3][0]=new Array('A','',0,0,1);
+I[38][3][1]=new Array('B','',1,100,1);
+I[38][3][2]=new Array('C','',0,0,1);
+I[38][3][3]=new Array('D','',0,0,1);
+I[39]=new Array();I[39][0]=100;
+I[39][1]='';
+I[39][2]='0';
+I[39][3]=new Array();
+I[39][3][0]=new Array('A','',1,100,1);
+I[39][3][1]=new Array('B','',0,0,1);
+I[39][3][2]=new Array('C','',0,0,1);
+I[39][3][3]=new Array('D','',0,0,1);
+I[40]=new Array();I[40][0]=100;
+I[40][1]='';
+I[40][2]='0';
+I[40][3]=new Array();
+I[40][3][0]=new Array('A','',1,100,1);
+I[40][3][1]=new Array('B','',0,0,1);
+I[40][3][2]=new Array('C','',0,0,1);
+I[40][3][3]=new Array('D','',0,0,1);
+I[41]=new Array();I[41][0]=100;
+I[41][1]='';
+I[41][2]='0';
+I[41][3]=new Array();
+I[41][3][0]=new Array('A','',1,100,1);
+I[41][3][1]=new Array('B','',0,0,1);
+I[41][3][2]=new Array('C','',0,0,1);
+I[41][3][3]=new Array('D','',0,0,1);
+I[42]=new Array();I[42][0]=100;
+I[42][1]='';
+I[42][2]='0';
+I[42][3]=new Array();
+I[42][3][0]=new Array('A','',0,0,1);
+I[42][3][1]=new Array('B','',0,0,1);
+I[42][3][2]=new Array('C','',0,0,1);
+I[42][3][3]=new Array('D','',1,100,1);
+I[43]=new Array();I[43][0]=100;
+I[43][1]='';
+I[43][2]='0';
+I[43][3]=new Array();
+I[43][3][0]=new Array('A','',0,0,1);
+I[43][3][1]=new Array('B','',1,100,1);
+I[43][3][2]=new Array('C','',0,0,1);
+I[43][3][3]=new Array('D','',0,0,1);
+I[44]=new Array();I[44][0]=100;
+I[44][1]='';
+I[44][2]='0';
+I[44][3]=new Array();
+I[44][3][0]=new Array('A','',0,0,1);
+I[44][3][1]=new Array('B','',0,0,1);
+I[44][3][2]=new Array('C','',0,0,1);
+I[44][3][3]=new Array('D','',1,100,1);
+I[45]=new Array();I[45][0]=100;
+I[45][1]='';
+I[45][2]='0';
+I[45][3]=new Array();
+I[45][3][0]=new Array('A','',1,100,1);
+I[45][3][1]=new Array('B','',0,0,1);
+I[45][3][2]=new Array('C','',0,0,1);
+I[45][3][3]=new Array('D','',0,0,1);
+I[46]=new Array();I[46][0]=100;
+I[46][1]='';
+I[46][2]='0';
+I[46][3]=new Array();
+I[46][3][0]=new Array('A','',1,100,1);
+I[46][3][1]=new Array('B','',0,0,1);
+I[46][3][2]=new Array('C','',0,0,1);
+I[46][3][3]=new Array('D','',0,0,1);
+I[47]=new Array();I[47][0]=100;
+I[47][1]='';
+I[47][2]='0';
+I[47][3]=new Array();
+I[47][3][0]=new Array('A','',0,0,1);
+I[47][3][1]=new Array('B','',0,0,1);
+I[47][3][2]=new Array('C','',0,0,1);
+I[47][3][3]=new Array('D','',1,100,1);
+I[48]=new Array();I[48][0]=100;
+I[48][1]='';
+I[48][2]='0';
+I[48][3]=new Array();
+I[48][3][0]=new Array('A','',1,100,1);
+I[48][3][1]=new Array('B','',0,0,1);
+I[48][3][2]=new Array('C','',0,0,1);
+I[48][3][3]=new Array('D','',0,0,1);
+I[49]=new Array();I[49][0]=100;
+I[49][1]='';
+I[49][2]='0';
+I[49][3]=new Array();
+I[49][3][0]=new Array('A','',0,0,1);
+I[49][3][1]=new Array('B','',0,0,1);
+I[49][3][2]=new Array('C','',0,0,1);
+I[49][3][3]=new Array('D','',1,100,1);
+I[50]=new Array();I[50][0]=100;
+I[50][1]='';
+I[50][2]='0';
+I[50][3]=new Array();
+I[50][3][0]=new Array('A','',0,0,1);
+I[50][3][1]=new Array('B','',1,100,1);
+I[50][3][2]=new Array('C','',0,0,1);
+I[50][3][3]=new Array('D','',0,0,1);
+I[51]=new Array();I[51][0]=100;
+I[51][1]='';
+I[51][2]='0';
+I[51][3]=new Array();
+I[51][3][0]=new Array('A','',1,100,1);
+I[51][3][1]=new Array('B','',0,0,1);
+I[51][3][2]=new Array('C','',0,0,1);
+I[51][3][3]=new Array('D','',0,0,1);
+I[52]=new Array();I[52][0]=100;
+I[52][1]='';
+I[52][2]='0';
+I[52][3]=new Array();
+I[52][3][0]=new Array('A','',1,100,1);
+I[52][3][1]=new Array('B','',0,0,1);
+I[52][3][2]=new Array('C','',0,0,1);
+I[52][3][3]=new Array('D','',0,0,1);
+I[53]=new Array();I[53][0]=100;
+I[53][1]='';
+I[53][2]='0';
+I[53][3]=new Array();
+I[53][3][0]=new Array('A','',0,0,1);
+I[53][3][1]=new Array('B','',0,0,1);
+I[53][3][2]=new Array('C','',1,100,1);
+I[53][3][3]=new Array('D','',0,0,1);
+I[54]=new Array();I[54][0]=100;
+I[54][1]='';
+I[54][2]='0';
+I[54][3]=new Array();
+I[54][3][0]=new Array('A','',1,100,1);
+I[54][3][1]=new Array('B','',0,0,1);
+I[54][3][2]=new Array('C','',0,0,1);
+I[54][3][3]=new Array('D','',0,0,1);
+I[55]=new Array();I[55][0]=100;
+I[55][1]='';
+I[55][2]='0';
+I[55][3]=new Array();
+I[55][3][0]=new Array('A','',0,0,1);
+I[55][3][1]=new Array('B','',0,0,1);
+I[55][3][2]=new Array('C','',1,100,1);
+I[55][3][3]=new Array('D','',0,0,1);
+I[56]=new Array();I[56][0]=100;
+I[56][1]='';
+I[56][2]='0';
+I[56][3]=new Array();
+I[56][3][0]=new Array('A','',1,100,1);
+I[56][3][1]=new Array('B','',0,0,1);
+I[56][3][2]=new Array('C','',0,0,1);
+I[56][3][3]=new Array('D','',0,0,1);
+I[57]=new Array();I[57][0]=100;
+I[57][1]='';
+I[57][2]='0';
+I[57][3]=new Array();
+I[57][3][0]=new Array('A','',0,0,1);
+I[57][3][1]=new Array('B','',1,100,1);
+I[57][3][2]=new Array('C','',0,0,1);
+I[57][3][3]=new Array('D','',0,0,1);
+I[58]=new Array();I[58][0]=100;
+I[58][1]='';
+I[58][2]='0';
+I[58][3]=new Array();
+I[58][3][0]=new Array('A','',0,0,1);
+I[58][3][1]=new Array('B','',1,100,1);
+I[58][3][2]=new Array('C','',0,0,1);
+I[58][3][3]=new Array('D','',0,0,1);
+I[59]=new Array();I[59][0]=100;
+I[59][1]='';
+I[59][2]='0';
+I[59][3]=new Array();
+I[59][3][0]=new Array('A','',0,0,1);
+I[59][3][1]=new Array('B','',0,0,1);
+I[59][3][2]=new Array('C','',0,0,1);
+I[59][3][3]=new Array('D','',1,100,1);
+I[60]=new Array();I[60][0]=100;
+I[60][1]='';
+I[60][2]='0';
+I[60][3]=new Array();
+I[60][3][0]=new Array('A','',0,0,1);
+I[60][3][1]=new Array('B','',0,0,1);
+I[60][3][2]=new Array('C','',0,0,1);
+I[60][3][3]=new Array('D','',1,100,1);
+I[61]=new Array();I[61][0]=100;
+I[61][1]='';
+I[61][2]='0';
+I[61][3]=new Array();
+I[61][3][0]=new Array('A','',0,0,1);
+I[61][3][1]=new Array('B','',0,0,1);
+I[61][3][2]=new Array('C','',1,100,1);
+I[61][3][3]=new Array('D','',0,0,1);
+I[62]=new Array();I[62][0]=100;
+I[62][1]='';
+I[62][2]='0';
+I[62][3]=new Array();
+I[62][3][0]=new Array('A','',1,100,1);
+I[62][3][1]=new Array('B','',0,0,1);
+I[62][3][2]=new Array('C','',0,0,1);
+I[62][3][3]=new Array('D','',0,0,1);
+I[63]=new Array();I[63][0]=100;
+I[63][1]='';
+I[63][2]='0';
+I[63][3]=new Array();
+I[63][3][0]=new Array('A','',0,0,1);
+I[63][3][1]=new Array('B','',0,0,1);
+I[63][3][2]=new Array('C','',1,100,1);
+I[63][3][3]=new Array('D','',0,0,1);
+I[64]=new Array();I[64][0]=100;
+I[64][1]='';
+I[64][2]='0';
+I[64][3]=new Array();
+I[64][3][0]=new Array('A','',1,100,1);
+I[64][3][1]=new Array('B','',0,0,1);
+I[64][3][2]=new Array('C','',0,0,1);
+I[64][3][3]=new Array('D','',0,0,1);
+I[65]=new Array();I[65][0]=100;
+I[65][1]='';
+I[65][2]='0';
+I[65][3]=new Array();
+I[65][3][0]=new Array('A','',1,100,1);
+I[65][3][1]=new Array('B','',0,0,1);
+I[65][3][2]=new Array('C','',0,0,1);
+I[65][3][3]=new Array('D','',0,0,1);
+I[66]=new Array();I[66][0]=100;
+I[66][1]='';
+I[66][2]='0';
+I[66][3]=new Array();
+I[66][3][0]=new Array('A','',0,0,1);
+I[66][3][1]=new Array('B','',0,0,1);
+I[66][3][2]=new Array('C','',1,100,1);
+I[66][3][3]=new Array('D','',0,0,1);
+I[67]=new Array();I[67][0]=100;
+I[67][1]='';
+I[67][2]='0';
+I[67][3]=new Array();
+I[67][3][0]=new Array('A','',0,0,1);
+I[67][3][1]=new Array('B','',1,100,1);
+I[67][3][2]=new Array('C','',0,0,1);
+I[67][3][3]=new Array('D','',0,0,1);
+I[68]=new Array();I[68][0]=100;
+I[68][1]='';
+I[68][2]='0';
+I[68][3]=new Array();
+I[68][3][0]=new Array('A','',0,0,1);
+I[68][3][1]=new Array('B','',0,0,1);
+I[68][3][2]=new Array('C','',1,100,1);
+I[68][3][3]=new Array('D','',0,0,1);
+I[69]=new Array();I[69][0]=100;
+I[69][1]='';
+I[69][2]='0';
+I[69][3]=new Array();
+I[69][3][0]=new Array('A','',0,0,1);
+I[69][3][1]=new Array('B','',0,0,1);
+I[69][3][2]=new Array('C','',0,0,1);
+I[69][3][3]=new Array('D','',1,100,1);
+I[70]=new Array();I[70][0]=100;
+I[70][1]='';
+I[70][2]='0';
+I[70][3]=new Array();
+I[70][3][0]=new Array('A','',0,0,1);
+I[70][3][1]=new Array('B','',1,100,1);
+I[70][3][2]=new Array('C','',0,0,1);
+I[70][3][3]=new Array('D','',0,0,1);
+I[71]=new Array();I[71][0]=100;
+I[71][1]='';
+I[71][2]='0';
+I[71][3]=new Array();
+I[71][3][0]=new Array('A','',0,0,1);
+I[71][3][1]=new Array('B','',1,100,1);
+I[71][3][2]=new Array('C','',0,0,1);
+I[71][3][3]=new Array('D','',0,0,1);
+I[72]=new Array();I[72][0]=100;
+I[72][1]='';
+I[72][2]='0';
+I[72][3]=new Array();
+I[72][3][0]=new Array('A','',0,0,1);
+I[72][3][1]=new Array('B','',0,0,1);
+I[72][3][2]=new Array('C','',1,100,1);
+I[72][3][3]=new Array('D','',0,0,1);
+I[73]=new Array();I[73][0]=100;
+I[73][1]='';
+I[73][2]='0';
+I[73][3]=new Array();
+I[73][3][0]=new Array('A','',0,0,1);
+I[73][3][1]=new Array('B','',0,0,1);
+I[73][3][2]=new Array('C','',1,100,1);
+I[73][3][3]=new Array('D','',0,0,1);
+I[74]=new Array();I[74][0]=100;
+I[74][1]='';
+I[74][2]='0';
+I[74][3]=new Array();
+I[74][3][0]=new Array('A','',1,100,1);
+I[74][3][1]=new Array('B','',0,0,1);
+I[74][3][2]=new Array('C','',0,0,1);
+I[74][3][3]=new Array('D','',0,0,1);
+I[75]=new Array();I[75][0]=100;
+I[75][1]='';
+I[75][2]='0';
+I[75][3]=new Array();
+I[75][3][0]=new Array('A','',0,0,1);
+I[75][3][1]=new Array('B','',0,0,1);
+I[75][3][2]=new Array('C','',1,100,1);
+I[75][3][3]=new Array('D','',0,0,1);
+I[76]=new Array();I[76][0]=100;
+I[76][1]='';
+I[76][2]='0';
+I[76][3]=new Array();
+I[76][3][0]=new Array('A','',0,0,1);
+I[76][3][1]=new Array('B','',0,0,1);
+I[76][3][2]=new Array('C','',1,100,1);
+I[76][3][3]=new Array('D','',0,0,1);
+I[77]=new Array();I[77][0]=100;
+I[77][1]='';
+I[77][2]='0';
+I[77][3]=new Array();
+I[77][3][0]=new Array('A','',0,0,1);
+I[77][3][1]=new Array('B','',0,0,1);
+I[77][3][2]=new Array('C','',1,100,1);
+I[77][3][3]=new Array('D','',0,0,1);
+I[78]=new Array();I[78][0]=100;
+I[78][1]='';
+I[78][2]='0';
+I[78][3]=new Array();
+I[78][3][0]=new Array('A','',1,100,1);
+I[78][3][1]=new Array('B','',0,0,1);
+I[78][3][2]=new Array('C','',0,0,1);
+I[78][3][3]=new Array('D','',0,0,1);
+I[79]=new Array();I[79][0]=100;
+I[79][1]='';
+I[79][2]='0';
+I[79][3]=new Array();
+I[79][3][0]=new Array('A','',0,0,1);
+I[79][3][1]=new Array('B','',0,0,1);
+I[79][3][2]=new Array('C','',0,0,1);
+I[79][3][3]=new Array('D','',1,100,1);
+I[80]=new Array();I[80][0]=100;
+I[80][1]='';
+I[80][2]='0';
+I[80][3]=new Array();
+I[80][3][0]=new Array('A','',0,0,1);
+I[80][3][1]=new Array('B','',0,0,1);
+I[80][3][2]=new Array('C','',0,0,1);
+I[80][3][3]=new Array('D','',1,100,1);
+I[81]=new Array();I[81][0]=100;
+I[81][1]='';
+I[81][2]='0';
+I[81][3]=new Array();
+I[81][3][0]=new Array('A','',1,100,1);
+I[81][3][1]=new Array('B','',0,0,1);
+I[81][3][2]=new Array('C','',0,0,1);
+I[81][3][3]=new Array('D','',0,0,1);
+I[82]=new Array();I[82][0]=100;
+I[82][1]='';
+I[82][2]='0';
+I[82][3]=new Array();
+I[82][3][0]=new Array('A','',0,0,1);
+I[82][3][1]=new Array('B','',1,100,1);
+I[82][3][2]=new Array('C','',0,0,1);
+I[82][3][3]=new Array('D','',0,0,1);
+I[83]=new Array();I[83][0]=100;
+I[83][1]='';
+I[83][2]='0';
+I[83][3]=new Array();
+I[83][3][0]=new Array('A','',0,0,1);
+I[83][3][1]=new Array('B','',0,0,1);
+I[83][3][2]=new Array('C','',0,0,1);
+I[83][3][3]=new Array('D','',1,100,1);
+I[84]=new Array();I[84][0]=100;
+I[84][1]='';
+I[84][2]='0';
+I[84][3]=new Array();
+I[84][3][0]=new Array('A','',0,0,1);
+I[84][3][1]=new Array('B','',0,0,1);
+I[84][3][2]=new Array('C','',1,100,1);
+I[84][3][3]=new Array('D','',0,0,1);
+I[85]=new Array();I[85][0]=100;
+I[85][1]='';
+I[85][2]='0';
+I[85][3]=new Array();
+I[85][3][0]=new Array('A','',0,0,1);
+I[85][3][1]=new Array('B','',0,0,1);
+I[85][3][2]=new Array('C','',0,0,1);
+I[85][3][3]=new Array('D','',1,100,1);
+I[86]=new Array();I[86][0]=100;
+I[86][1]='';
+I[86][2]='0';
+I[86][3]=new Array();
+I[86][3][0]=new Array('A','',0,0,1);
+I[86][3][1]=new Array('B','',1,100,1);
+I[86][3][2]=new Array('C','',0,0,1);
+I[86][3][3]=new Array('D','',0,0,1);
+I[87]=new Array();I[87][0]=100;
+I[87][1]='';
+I[87][2]='0';
+I[87][3]=new Array();
+I[87][3][0]=new Array('A','',0,0,1);
+I[87][3][1]=new Array('B','',1,100,1);
+I[87][3][2]=new Array('C','',0,0,1);
+I[87][3][3]=new Array('D','',0,0,1);
+I[88]=new Array();I[88][0]=100;
+I[88][1]='';
+I[88][2]='0';
+I[88][3]=new Array();
+I[88][3][0]=new Array('A','',0,0,1);
+I[88][3][1]=new Array('B','',0,0,1);
+I[88][3][2]=new Array('C','',0,0,1);
+I[88][3][3]=new Array('D','',1,100,1);
+I[89]=new Array();I[89][0]=100;
+I[89][1]='';
+I[89][2]='0';
+I[89][3]=new Array();
+I[89][3][0]=new Array('A','',0,0,1);
+I[89][3][1]=new Array('B','',1,100,1);
+I[89][3][2]=new Array('C','',0,0,1);
+I[89][3][3]=new Array('D','',0,0,1);
+I[90]=new Array();I[90][0]=100;
+I[90][1]='';
+I[90][2]='0';
+I[90][3]=new Array();
+I[90][3][0]=new Array('A','',0,0,1);
+I[90][3][1]=new Array('B','',0,0,1);
+I[90][3][2]=new Array('C','',1,100,1);
+I[90][3][3]=new Array('D','',0,0,1);
+I[91]=new Array();I[91][0]=100;
+I[91][1]='';
+I[91][2]='0';
+I[91][3]=new Array();
+I[91][3][0]=new Array('A','',1,100,1);
+I[91][3][1]=new Array('B','',0,0,1);
+I[91][3][2]=new Array('C','',0,0,1);
+I[91][3][3]=new Array('D','',0,0,1);
+I[92]=new Array();I[92][0]=100;
+I[92][1]='';
+I[92][2]='0';
+I[92][3]=new Array();
+I[92][3][0]=new Array('A','',0,0,1);
+I[92][3][1]=new Array('B','',1,100,1);
+I[92][3][2]=new Array('C','',0,0,1);
+I[92][3][3]=new Array('D','',0,0,1);
+I[93]=new Array();I[93][0]=100;
+I[93][1]='';
+I[93][2]='0';
+I[93][3]=new Array();
+I[93][3][0]=new Array('A','',0,0,1);
+I[93][3][1]=new Array('B','',0,0,1);
+I[93][3][2]=new Array('C','',0,0,1);
+I[93][3][3]=new Array('D','',1,100,1);
+I[94]=new Array();I[94][0]=100;
+I[94][1]='';
+I[94][2]='0';
+I[94][3]=new Array();
+I[94][3][0]=new Array('A','',0,0,1);
+I[94][3][1]=new Array('B','',0,0,1);
+I[94][3][2]=new Array('C','',0,0,1);
+I[94][3][3]=new Array('D','',1,100,1);
+I[95]=new Array();I[95][0]=100;
+I[95][1]='';
+I[95][2]='0';
+I[95][3]=new Array();
+I[95][3][0]=new Array('A','',0,0,1);
+I[95][3][1]=new Array('B','',0,0,1);
+I[95][3][2]=new Array('C','',0,0,1);
+I[95][3][3]=new Array('D','',1,100,1);
+I[96]=new Array();I[96][0]=100;
+I[96][1]='';
+I[96][2]='0';
+I[96][3]=new Array();
+I[96][3][0]=new Array('A','',1,100,1);
+I[96][3][1]=new Array('B','',0,0,1);
+I[96][3][2]=new Array('C','',0,0,1);
+I[96][3][3]=new Array('D','',0,0,1);
+I[97]=new Array();I[97][0]=100;
+I[97][1]='';
+I[97][2]='0';
+I[97][3]=new Array();
+I[97][3][0]=new Array('A','',0,0,1);
+I[97][3][1]=new Array('B','',0,0,1);
+I[97][3][2]=new Array('C','',0,0,1);
+I[97][3][3]=new Array('D','',1,100,1);
+I[98]=new Array();I[98][0]=100;
+I[98][1]='';
+I[98][2]='0';
+I[98][3]=new Array();
+I[98][3][0]=new Array('A','',1,100,1);
+I[98][3][1]=new Array('B','',0,0,1);
+I[98][3][2]=new Array('C','',0,0,1);
+I[98][3][3]=new Array('D','',0,0,1);
+I[99]=new Array();I[99][0]=100;
+I[99][1]='';
+I[99][2]='0';
+I[99][3]=new Array();
+I[99][3][0]=new Array('A','',0,0,1);
+I[99][3][1]=new Array('B','',0,0,1);
+I[99][3][2]=new Array('C','',0,0,1);
+I[99][3][3]=new Array('D','',1,100,1);
+I[100]=new Array();I[100][0]=100;
+I[100][1]='';
+I[100][2]='0';
+I[100][3]=new Array();
+I[100][3][0]=new Array('A','',0,0,1);
+I[100][3][1]=new Array('B','',0,0,1);
+I[100][3][2]=new Array('C','',1,100,1);
+I[100][3][3]=new Array('D','',0,0,1);
+I[101]=new Array();I[101][0]=100;
+I[101][1]='';
+I[101][2]='0';
+I[101][3]=new Array();
+I[101][3][0]=new Array('A','',0,0,1);
+I[101][3][1]=new Array('B','',1,100,1);
+I[101][3][2]=new Array('C','',0,0,1);
+I[101][3][3]=new Array('D','',0,0,1);
+I[102]=new Array();I[102][0]=100;
+I[102][1]='';
+I[102][2]='0';
+I[102][3]=new Array();
+I[102][3][0]=new Array('A','',0,0,1);
+I[102][3][1]=new Array('B','',1,100,1);
+I[102][3][2]=new Array('C','',0,0,1);
+I[102][3][3]=new Array('D','',0,0,1);
+I[103]=new Array();I[103][0]=100;
+I[103][1]='';
+I[103][2]='0';
+I[103][3]=new Array();
+I[103][3][0]=new Array('A','',0,0,1);
+I[103][3][1]=new Array('B','',1,100,1);
+I[103][3][2]=new Array('C','',0,0,1);
+I[103][3][3]=new Array('D','',0,0,1);
+I[104]=new Array();I[104][0]=100;
+I[104][1]='';
+I[104][2]='0';
+I[104][3]=new Array();
+I[104][3][0]=new Array('A','',0,0,1);
+I[104][3][1]=new Array('B','',1,100,1);
+I[104][3][2]=new Array('C','',0,0,1);
+I[104][3][3]=new Array('D','',0,0,1);
+I[105]=new Array();I[105][0]=100;
+I[105][1]='';
+I[105][2]='0';
+I[105][3]=new Array();
+I[105][3][0]=new Array('A','',0,0,1);
+I[105][3][1]=new Array('B','',1,100,1);
+I[105][3][2]=new Array('C','',0,0,1);
+I[105][3][3]=new Array('D','',0,0,1);
+I[106]=new Array();I[106][0]=100;
+I[106][1]='';
+I[106][2]='0';
+I[106][3]=new Array();
+I[106][3][0]=new Array('A','',0,0,1);
+I[106][3][1]=new Array('B','',0,0,1);
+I[106][3][2]=new Array('C','',1,100,1);
+I[106][3][3]=new Array('D','',0,0,1);
+I[107]=new Array();I[107][0]=100;
+I[107][1]='';
+I[107][2]='0';
+I[107][3]=new Array();
+I[107][3][0]=new Array('A','',0,0,1);
+I[107][3][1]=new Array('B','',0,0,1);
+I[107][3][2]=new Array('C','',0,0,1);
+I[107][3][3]=new Array('D','',1,100,1);
+I[108]=new Array();I[108][0]=100;
+I[108][1]='';
+I[108][2]='0';
+I[108][3]=new Array();
+I[108][3][0]=new Array('A','',0,0,1);
+I[108][3][1]=new Array('B','',0,0,1);
+I[108][3][2]=new Array('C','',0,0,1);
+I[108][3][3]=new Array('D','',1,100,1);
+I[109]=new Array();I[109][0]=100;
+I[109][1]='';
+I[109][2]='0';
+I[109][3]=new Array();
+I[109][3][0]=new Array('A','',0,0,1);
+I[109][3][1]=new Array('B','',0,0,1);
+I[109][3][2]=new Array('C','',1,100,1);
+I[109][3][3]=new Array('D','',0,0,1);
+I[110]=new Array();I[110][0]=100;
+I[110][1]='';
+I[110][2]='0';
+I[110][3]=new Array();
+I[110][3][0]=new Array('A','',0,0,1);
+I[110][3][1]=new Array('B','',0,0,1);
+I[110][3][2]=new Array('C','',1,100,1);
+I[110][3][3]=new Array('D','',0,0,1);
+I[111]=new Array();I[111][0]=100;
+I[111][1]='';
+I[111][2]='0';
+I[111][3]=new Array();
+I[111][3][0]=new Array('A','',0,0,1);
+I[111][3][1]=new Array('B','',1,100,1);
+I[111][3][2]=new Array('C','',0,0,1);
+I[111][3][3]=new Array('D','',0,0,1);
+I[112]=new Array();I[112][0]=100;
+I[112][1]='';
+I[112][2]='0';
+I[112][3]=new Array();
+I[112][3][0]=new Array('A','',0,0,1);
+I[112][3][1]=new Array('B','',0,0,1);
+I[112][3][2]=new Array('C','',0,0,1);
+I[112][3][3]=new Array('D','',1,100,1);
+I[113]=new Array();I[113][0]=100;
+I[113][1]='';
+I[113][2]='0';
+I[113][3]=new Array();
+I[113][3][0]=new Array('A','',0,0,1);
+I[113][3][1]=new Array('B','',0,0,1);
+I[113][3][2]=new Array('C','',0,0,1);
+I[113][3][3]=new Array('D','',1,100,1);
+I[114]=new Array();I[114][0]=100;
+I[114][1]='';
+I[114][2]='0';
+I[114][3]=new Array();
+I[114][3][0]=new Array('A','',0,0,1);
+I[114][3][1]=new Array('B','',0,0,1);
+I[114][3][2]=new Array('C','',0,0,1);
+I[114][3][3]=new Array('D','',1,100,1);
+I[115]=new Array();I[115][0]=100;
+I[115][1]='';
+I[115][2]='0';
+I[115][3]=new Array();
+I[115][3][0]=new Array('A','',0,0,1);
+I[115][3][1]=new Array('B','',1,100,1);
+I[115][3][2]=new Array('C','',0,0,1);
+I[115][3][3]=new Array('D','',0,0,1);
+I[116]=new Array();I[116][0]=100;
+I[116][1]='';
+I[116][2]='0';
+I[116][3]=new Array();
+I[116][3][0]=new Array('A','',0,0,1);
+I[116][3][1]=new Array('B','',1,100,1);
+I[116][3][2]=new Array('C','',0,0,1);
+I[116][3][3]=new Array('D','',0,0,1);
+I[117]=new Array();I[117][0]=100;
+I[117][1]='';
+I[117][2]='0';
+I[117][3]=new Array();
+I[117][3][0]=new Array('A','',1,100,1);
+I[117][3][1]=new Array('B','',0,0,1);
+I[117][3][2]=new Array('C','',0,0,1);
+I[117][3][3]=new Array('D','',0,0,1);
+I[118]=new Array();I[118][0]=100;
+I[118][1]='';
+I[118][2]='0';
+I[118][3]=new Array();
+I[118][3][0]=new Array('A','',0,0,1);
+I[118][3][1]=new Array('B','',1,100,1);
+I[118][3][2]=new Array('C','',0,0,1);
+I[118][3][3]=new Array('D','',0,0,1);
+I[119]=new Array();I[119][0]=100;
+I[119][1]='';
+I[119][2]='0';
+I[119][3]=new Array();
+I[119][3][0]=new Array('A','',0,0,1);
+I[119][3][1]=new Array('B','',0,0,1);
+I[119][3][2]=new Array('C','',1,100,1);
+I[119][3][3]=new Array('D','',0,0,1);
+I[120]=new Array();I[120][0]=100;
+I[120][1]='';
+I[120][2]='0';
+I[120][3]=new Array();
+I[120][3][0]=new Array('A','',0,0,1);
+I[120][3][1]=new Array('B','',0,0,1);
+I[120][3][2]=new Array('C','',0,0,1);
+I[120][3][3]=new Array('D','',1,100,1);
+I[121]=new Array();I[121][0]=100;
+I[121][1]='';
+I[121][2]='0';
+I[121][3]=new Array();
+I[121][3][0]=new Array('A','',0,0,1);
+I[121][3][1]=new Array('B','',1,100,1);
+I[121][3][2]=new Array('C','',0,0,1);
+I[121][3][3]=new Array('D','',0,0,1);
+I[122]=new Array();I[122][0]=100;
+I[122][1]='';
+I[122][2]='0';
+I[122][3]=new Array();
+I[122][3][0]=new Array('A','',1,100,1);
+I[122][3][1]=new Array('B','',0,0,1);
+I[122][3][2]=new Array('C','',0,0,1);
+I[122][3][3]=new Array('D','',0,0,1);
+I[123]=new Array();I[123][0]=100;
+I[123][1]='';
+I[123][2]='0';
+I[123][3]=new Array();
+I[123][3][0]=new Array('A','',0,0,1);
+I[123][3][1]=new Array('B','',0,0,1);
+I[123][3][2]=new Array('C','',1,100,1);
+I[123][3][3]=new Array('D','',0,0,1);
+I[124]=new Array();I[124][0]=100;
+I[124][1]='';
+I[124][2]='0';
+I[124][3]=new Array();
+I[124][3][0]=new Array('A','',1,100,1);
+I[124][3][1]=new Array('B','',0,0,1);
+I[124][3][2]=new Array('C','',0,0,1);
+I[124][3][3]=new Array('D','',0,0,1);
+I[125]=new Array();I[125][0]=100;
+I[125][1]='';
+I[125][2]='0';
+I[125][3]=new Array();
+I[125][3][0]=new Array('A','',0,0,1);
+I[125][3][1]=new Array('B','',1,100,1);
+I[125][3][2]=new Array('C','',0,0,1);
+I[125][3][3]=new Array('D','',0,0,1);
+I[126]=new Array();I[126][0]=100;
+I[126][1]='';
+I[126][2]='0';
+I[126][3]=new Array();
+I[126][3][0]=new Array('A','',1,100,1);
+I[126][3][1]=new Array('B','',0,0,1);
+I[126][3][2]=new Array('C','',0,0,1);
+I[126][3][3]=new Array('D','',0,0,1);
+I[127]=new Array();I[127][0]=100;
+I[127][1]='';
+I[127][2]='0';
+I[127][3]=new Array();
+I[127][3][0]=new Array('A','',0,0,1);
+I[127][3][1]=new Array('B','',0,0,1);
+I[127][3][2]=new Array('C','',0,0,1);
+I[127][3][3]=new Array('D','',1,100,1);
+I[128]=new Array();I[128][0]=100;
+I[128][1]='';
+I[128][2]='0';
+I[128][3]=new Array();
+I[128][3][0]=new Array('A','',0,0,1);
+I[128][3][1]=new Array('B','',0,0,1);
+I[128][3][2]=new Array('C','',0,0,1);
+I[128][3][3]=new Array('D','',1,100,1);
+I[129]=new Array();I[129][0]=100;
+I[129][1]='';
+I[129][2]='0';
+I[129][3]=new Array();
+I[129][3][0]=new Array('A','',0,0,1);
+I[129][3][1]=new Array('B','',1,100,1);
+I[129][3][2]=new Array('C','',0,0,1);
+I[129][3][3]=new Array('D','',0,0,1);
+I[130]=new Array();I[130][0]=100;
+I[130][1]='';
+I[130][2]='0';
+I[130][3]=new Array();
+I[130][3][0]=new Array('A','',1,100,1);
+I[130][3][1]=new Array('B','',0,0,1);
+I[130][3][2]=new Array('C','',0,0,1);
+I[130][3][3]=new Array('D','',0,0,1);
+I[131]=new Array();I[131][0]=100;
+I[131][1]='';
+I[131][2]='0';
+I[131][3]=new Array();
+I[131][3][0]=new Array('A','',0,0,1);
+I[131][3][1]=new Array('B','',0,0,1);
+I[131][3][2]=new Array('C','',0,0,1);
+I[131][3][3]=new Array('D','',1,100,1);
+I[132]=new Array();I[132][0]=100;
+I[132][1]='';
+I[132][2]='0';
+I[132][3]=new Array();
+I[132][3][0]=new Array('A','',0,0,1);
+I[132][3][1]=new Array('B','',1,100,1);
+I[132][3][2]=new Array('C','',0,0,1);
+I[132][3][3]=new Array('D','',0,0,1);
+I[133]=new Array();I[133][0]=100;
+I[133][1]='';
+I[133][2]='0';
+I[133][3]=new Array();
+I[133][3][0]=new Array('A','',1,100,1);
+I[133][3][1]=new Array('B','',0,0,1);
+I[133][3][2]=new Array('C','',0,0,1);
+I[133][3][3]=new Array('D','',0,0,1);
+I[134]=new Array();I[134][0]=100;
+I[134][1]='';
+I[134][2]='0';
+I[134][3]=new Array();
+I[134][3][0]=new Array('A','',1,100,1);
+I[134][3][1]=new Array('B','',0,0,1);
+I[134][3][2]=new Array('C','',0,0,1);
+I[134][3][3]=new Array('D','',0,0,1);
+I[135]=new Array();I[135][0]=100;
+I[135][1]='';
+I[135][2]='0';
+I[135][3]=new Array();
+I[135][3][0]=new Array('A','',0,0,1);
+I[135][3][1]=new Array('B','',0,0,1);
+I[135][3][2]=new Array('C','',0,0,1);
+I[135][3][3]=new Array('D','',1,100,1);
+I[136]=new Array();I[136][0]=100;
+I[136][1]='';
+I[136][2]='0';
+I[136][3]=new Array();
+I[136][3][0]=new Array('A','',0,0,1);
+I[136][3][1]=new Array('B','',1,100,1);
+I[136][3][2]=new Array('C','',0,0,1);
+I[136][3][3]=new Array('D','',0,0,1);
+I[137]=new Array();I[137][0]=100;
+I[137][1]='';
+I[137][2]='0';
+I[137][3]=new Array();
+I[137][3][0]=new Array('A','',0,0,1);
+I[137][3][1]=new Array('B','',1,100,1);
+I[137][3][2]=new Array('C','',0,0,1);
+I[137][3][3]=new Array('D','',0,0,1);
+I[138]=new Array();I[138][0]=100;
+I[138][1]='';
+I[138][2]='0';
+I[138][3]=new Array();
+I[138][3][0]=new Array('A','',0,0,1);
+I[138][3][1]=new Array('B','',0,0,1);
+I[138][3][2]=new Array('C','',1,100,1);
+I[138][3][3]=new Array('D','',0,0,1);
+I[139]=new Array();I[139][0]=100;
+I[139][1]='';
+I[139][2]='0';
+I[139][3]=new Array();
+I[139][3][0]=new Array('A','',0,0,1);
+I[139][3][1]=new Array('B','',1,100,1);
+I[139][3][2]=new Array('C','',0,0,1);
+I[139][3][3]=new Array('D','',0,0,1);
+I[140]=new Array();I[140][0]=100;
+I[140][1]='';
+I[140][2]='0';
+I[140][3]=new Array();
+I[140][3][0]=new Array('A','',0,0,1);
+I[140][3][1]=new Array('B','',0,0,1);
+I[140][3][2]=new Array('C','',0,0,1);
+I[140][3][3]=new Array('D','',1,100,1);
+I[141]=new Array();I[141][0]=100;
+I[141][1]='';
+I[141][2]='0';
+I[141][3]=new Array();
+I[141][3][0]=new Array('A','',0,0,1);
+I[141][3][1]=new Array('B','',0,0,1);
+I[141][3][2]=new Array('C','',1,100,1);
+I[141][3][3]=new Array('D','',0,0,1);
+
+
+function StartUp(){
+
+//If there's only one question, no need for question navigation controls
+	if (QsToShow < 2){
+		document.getElementById('QNav').style.display = 'none';
+	}
+	
+//Stash the instructions so they can be redisplayed
+	strInstructions = document.getElementById('InstructionsDiv').innerHTML;
+	
+
+	
+
+	
+
+	PreloadImages('https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(1).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(2).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(3).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(4).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(5).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(6).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(7).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(8).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(9).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(10).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(11).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(12).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(13).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(14).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(15).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(16).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(17).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(18).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(19).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(20).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(21).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(22).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(23).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(24).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(25).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(26).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(27).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(28).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(29).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(30).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(31).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(32).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(33).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(34).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(35).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(36).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(37).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(38).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(39).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(40).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(41).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(42).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(43).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(44).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(45).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(46).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(47).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(48).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(49).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(50).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(51).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(52).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(53).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(54).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(55).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(56).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(57).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(58).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(59).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(60).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(61).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(62).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(63).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(64).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(65).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(66).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(67).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(68).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(69).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(70).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(71).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(72).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(73).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(74).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(75).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(76).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(77).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(78).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(79).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(80).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(81).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(82).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(83).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(84).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(85).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(86).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(87).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(88).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(89).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(90).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(91).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(92).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(93).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(94).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(95).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(96).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(97).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(98).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(99).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(100).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(101).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(102).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(103).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(104).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(105).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(106).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(107).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(108).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(109).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(110).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(111).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(112).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(113).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(114).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(115).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(116).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(117).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(118).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(119).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(120).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(121).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(122).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(123).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(124).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(125).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(126).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(127).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(128).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(129).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(130).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(131).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(132).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(133).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(134).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(135).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(136).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(137).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(138).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(139).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(140).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(141).jpg','https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(142).jpg');
+
+	
+	CompleteEmptyFeedback();
+
+	SetUpQuestions();
+	ClearTextBoxes();
+	CreateStatusArray();
+	
+
+	
+//Check search string for q parameter
+	if (document.location.search.length > 0){
+		if (ShuffleQs == false){
+			var JumpTo = parseInt(document.location.search.substring(1,document.location.search.length))-1;
+			if (JumpTo <= QsToShow){
+				ChangeQ(JumpTo);
+			}
+		}
+	}
+//Undocumented function added 10/12/2004
+	ShowSpecialReadingForQuestion();
+}
+
+function ShowHideQuestions(){
+	document.getElementById('ShowMethodButton').style.display = 'none';
+	if (ShowingAllQuestions == false){
+		for (var i=0; i<QArray.length; i++){
+				QArray[i].style.display = '';
+			}
+		document.getElementById('Questions').style.listStyleType = 'decimal';
+		document.getElementById('OneByOneReadout').style.display = 'none';
+		document.getElementById('ShowMethodButton').innerHTML = ShowOneByOneCaption;
+		ShowingAllQuestions = true;
+	}
+	else{
+		for (var i=0; i<QArray.length; i++){
+				if (i != CurrQNum){
+					QArray[i].style.display = 'none';
+				}
+			}
+		document.getElementById('Questions').style.listStyleType = 'none';
+		document.getElementById('OneByOneReadout').style.display = '';
+		document.getElementById('ShowMethodButton').innerHTML = ShowAllQuestionsCaption;
+		ShowingAllQuestions = false;	
+	}
+	document.getElementById('ShowMethodButton').style.display = 'inline';
+}
+
+function CreateStatusArray(){
+	var QNum, ANum;
+//For each item in the item array
+	for (QNum=0; QNum<I.length; QNum++){
+//Check if the question still exists (hasn't been nuked by showing a random selection)
+		if (document.getElementById('Q_' + QNum) != null){
+			State[QNum] = new Array();
+			State[QNum][0] = -1; //Score for this q; -1 shows question not done yet
+			State[QNum][1] = new Array(); //answers
+			for (ANum = 0; ANum<I[QNum][3].length; ANum++){
+				State[QNum][1][ANum] = 0; //answer not chosen yet; when chosen, will store its position in the series of choices
+			}
+			State[QNum][2] = 0; //tries at this q so far
+			State[QNum][3] = 0; //incrementing percent-correct values of selected answers
+			State[QNum][4] = 0; //penalties incurred for hints
+			State[QNum][5] = ''; //Sequence of answers chosen by number
+		}
+		else{
+			State[QNum] = null;
+		}
+	}
+}
+
+
+
+function CheckMCAnswer(QNum, ANum, Btn){
+//if question doesn't exist, bail
+	if (State[QNum].length < 1){return;}
+	
+//Get the feedback
+	Feedback = I[QNum][3][ANum][1];
+	
+//Now show feedback and bail if question already complete
+	if (State[QNum][0] > -1){
+//Add an extra message explaining that the question
+// is finished if defined by the user
+		if (strQuestionFinished.length > 0){Feedback += '<br />' + strQuestionFinished;}
+//Show the feedback
+		ShowMessage(Feedback);
+//New for 6.2.2.1: If you want to mark an answer as correct even when it's the final choice, uncomment this line.
+//		if (I[QNum][3][ANum][2] >= 1){Btn.innerHTML = CorrectIndicator;}else{Btn.innerHTML = IncorrectIndicator;}	
+		return;
+	}
+	
+//Hide the button while processing
+	Btn.style.display = 'none';
+
+//Increment the number of tries
+	State[QNum][2]++;
+	
+//Add the percent-correct value of this answer
+	State[QNum][3] += I[QNum][3][ANum][3];
+	
+//Store the try number in the answer part of the State array, for tracking purposes
+	State[QNum][1][ANum] = State[QNum][2];
+	if (State[QNum][5].length > 0){State[QNum][5] += ' | ';}
+	State[QNum][5] += String.fromCharCode(65+ANum);
+	
+//Should this answer be accepted as correct?
+	if (I[QNum][3][ANum][2] < 1){
+//It's wrong
+
+//Mark the answer
+		Btn.innerHTML = IncorrectIndicator;
+		
+//Remove any previous score unless exercise is finished (6.0.3.8+)
+		if (Finished == false){
+			WriteToInstructions(strInstructions);
+		}	
+		
+//Check whether this leaves just one MC answer unselected, in which case the Q is terminated
+		var RemainingAnswer = FinalAnswer(QNum);
+		if (RemainingAnswer > -1){
+//Behave as if the last answer had been selected, but give no credit for it
+//Increment the number of tries
+			State[QNum][2]++;		
+		
+//Calculate the score for this question
+			CalculateMCQuestionScore(QNum);
+			
+//Get the overall score and add it to the feedback
+			CalculateOverallScore();
+//New for 6.2.2.1
+			var QsDone = CheckQuestionsCompleted();
+			if ((ContinuousScoring == true)||(Finished == true)){
+				Feedback += '<br />' + YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone;
+				WriteToInstructions(YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone);
+			}
+			else{
+				WriteToInstructions(QsDone);
+			}
+		}
+	}
+	else{
+//It's right
+//Mark the answer
+		Btn.innerHTML = CorrectIndicator;
+				
+//Calculate the score for this question
+		CalculateMCQuestionScore(QNum);
+		
+//New for 6.2.2.0
+		var QsDone = CheckQuestionsCompleted();
+
+//Get the overall score and add it to the feedback
+		if (ContinuousScoring == true){
+			CalculateOverallScore();
+			if ((ContinuousScoring == true)||(Finished == true)){
+				Feedback += '<br />' + YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone;
+				WriteToInstructions(YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone);
+			}
+		}
+		else{
+			WriteToInstructions(QsDone);
+		}
+	}
+	
+//Show the button again
+	Btn.style.display = 'inline';
+	
+//Finally, show the feedback	
+	ShowMessage(Feedback);
+	
+//Check whether all questions are now done
+	CheckFinished();
+}
+
+function CalculateMCQuestionScore(QNum){
+	var Tries = State[QNum][2] + State[QNum][4]; //include tries and hint penalties
+	var PercentCorrect = State[QNum][3];
+	var TotAns = GetTotalMCAnswers(QNum);
+	var HintPenalties = State[QNum][4];
+	
+//Make sure it's not already complete
+
+	if (State[QNum][0] < 0){
+//Allow for Hybrids
+		if (HintPenalties >= 1){
+			State[QNum][0] = 0;
+		}
+		else{
+//This line calculates the score for this question
+			if (TotAns == 1){
+				State[QNum][0] = 1;
+			}
+			else{
+				State[QNum][0] = ((TotAns-((Tries*100)/State[QNum][3]))/(TotAns-1));
+			}
+		}
+//Fix for Safari bug added for version 6.0.3.42 (negative infinity problem)
+		if ((State[QNum][0] < 0)||(State[QNum][0] == Number.NEGATIVE_INFINITY)){
+			State[QNum][0] = 0;
+		}
+	}
+}
+
+function GetTotalMCAnswers(QNum){
+	var Result = 0;
+	for (var ANum=0; ANum<I[QNum][3].length; ANum++){
+		if (I[QNum][3][ANum][4] == 1){ //This is an MC answer
+			Result++;
+		}
+	}
+	return Result;
+}
+
+function FinalAnswer(QNum){
+	var UnchosenAnswers = 0;
+	var FinalAnswer = -1;
+	for (var ANum=0; ANum<I[QNum][3].length; ANum++){
+		if (I[QNum][3][ANum][4] == 1){ //This is an MC answer
+			if (State[QNum][1][ANum] < 1){ //This answer hasn't been chosen yet
+				UnchosenAnswers++;
+				FinalAnswer = ANum;
+			}
+		}
+	}
+	if (UnchosenAnswers == 1){
+		return FinalAnswer;
+	}
+	else{
+		return -1;
+	}
+}
+
+
+
+
+
+function CalculateOverallScore(){
+	var TotalWeighting = 0;
+	var TotalScore = 0;
+	
+	for (var QNum=0; QNum<State.length; QNum++){
+		if (State[QNum] != null){
+			if (State[QNum][0] > -1){
+				TotalWeighting += I[QNum][0];
+				TotalScore += (I[QNum][0] * State[QNum][0]);
+			}
+		}
+	}
+	if (TotalWeighting > 0){
+		Score = Math.floor((TotalScore/TotalWeighting)*100);
+	}
+	else{
+//if TotalWeighting is 0, no questions so far have any value, so 
+//no penalty should be shown.
+		Score = 100; 
+	}
+}
+
+//New for 6.2.2.0
+function CheckQuestionsCompleted(){
+	if (ShowCompletedSoFar == false){return '';}
+	var QsCompleted = 0;
+	for (var QNum=0; QNum<State.length; QNum++){
+		if (State[QNum] != null){
+			if (State[QNum][0] >= 0){
+				QsCompleted++;
+			}
+		}
+	}
+//Fixes for 6.2.2.2
+	if (QsCompleted >= QArray.length){
+		return ExerciseCompleted;
+	}
+	else{
+		return CompletedSoFar + ' ' + QsCompleted + '/' + QArray.length + '.';
+	}
+}
+
+function CheckFinished(){
+	var FB = '';
+	var AllDone = true;
+	for (var QNum=0; QNum<State.length; QNum++){
+		if (State[QNum] != null){
+			if (State[QNum][0] < 0){
+				AllDone = false;
+			}
+		}
+	}
+	if (AllDone == true){
+	
+//Report final score and submit if necessary
+		CalculateOverallScore();
+		FB = YourScoreIs + ' ' + Score + '%.';
+		if (ShowCorrectFirstTime == true){
+			var CFT = 0;
+			for (QNum=0; QNum<State.length; QNum++){
+				if (State[QNum] != null){
+					if (State[QNum][0] >= 1){
+						CFT++;
+					}
+				}
+			}
+			FB += '<br />' + CorrectFirstTime + ' ' + CFT + '/' + QsToShow;
+		}
+		
+//New for 6.2.2.0
+		FB += '<br />' + ExerciseCompleted;
+		
+		WriteToInstructions(FB);
+		
+		Finished == true;
+
+
+
+
+		TimeOver = true;
+		Locked = true;
+		
+
+
+		Finished = true;
+		Detail = '<?xml version="1.0"?><hpnetresult><fields>';
+		for (QNum=0; QNum<State.length; QNum++){
+			if (State[QNum] != null){
+				if (State[QNum][5].length > 0){
+					Detail += '<field><fieldname>Question #' + (QNum+1) + '</fieldname><fieldtype>question-tracking</fieldtype><fieldlabel>Q ' + (QNum+1) + '</fieldlabel><fieldlabelid>QuestionTrackingField</fieldlabelid><fielddata>' + State[QNum][5] + '</fielddata></field>';
+				}
+			}
+		}
+		Detail += '</fields></hpnetresult>';
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+//-->
+
+//]]>
+
+</script>
+
+
+</head>
+
+<body onload="StartUp()" id="TheBody" >
+
+<!-- BeginTopNavButtons -->
+
+
+
+<!-- EndTopNavButtons -->
+
+<div class="Titles">
+	<h2 class="ExerciseTitle"></h2>
+
+	<h3 class="ExerciseSubtitle">MISHRA'S QUIZ </h3>
+
+
+
+</div>
+
+<div id="InstructionsDiv" class="StdDiv">
+	<div id="Instructions"></div>
+</div>
+
+
+<div id="ContainerDiv">
+
+
+
+<div class="ExerciseContainer">
+
+<div id="QNav" class="QuestionNavigation">
+
+<p style="text-align: right;">
+<button id="ShowMethodButton" class="FuncButton" onclick="ShowHideQuestions(); return false;">Show all questions</button>
+</p>
+
+<div id="OneByOneReadout">
+<button id="PrevQButton" class="FuncButton" onclick="ChangeQ(-1); return false;">&lt;=</button>
+
+<span id="QNumReadout" class="QNum">&#160;</span>
+
+<button id="NextQButton" class="FuncButton" onclick="ChangeQ(1); return false;">=&gt;</button>
+<br />
+</div>
+
+</div>
+ 
+<ol class="QuizQuestions" id="Questions">
+<li class="QuizQuestion" id="Q_0" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(1).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_0_0"><button class="FuncButton" id="Q_0_0_Btn" onclick="CheckMCAnswer(0,0,this)">?</button>&#160;&#160;A</li><li id="Q_0_1"><button class="FuncButton" id="Q_0_1_Btn" onclick="CheckMCAnswer(0,1,this)">?</button>&#160;&#160;B</li><li id="Q_0_2"><button class="FuncButton" id="Q_0_2_Btn" onclick="CheckMCAnswer(0,2,this)">?</button>&#160;&#160;C</li><li id="Q_0_3"><button class="FuncButton" id="Q_0_3_Btn" onclick="CheckMCAnswer(0,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_1" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(2).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_1_0"><button class="FuncButton" id="Q_1_0_Btn" onclick="CheckMCAnswer(1,0,this)">?</button>&#160;&#160;A</li><li id="Q_1_1"><button class="FuncButton" id="Q_1_1_Btn" onclick="CheckMCAnswer(1,1,this)">?</button>&#160;&#160;B</li><li id="Q_1_2"><button class="FuncButton" id="Q_1_2_Btn" onclick="CheckMCAnswer(1,2,this)">?</button>&#160;&#160;C</li><li id="Q_1_3"><button class="FuncButton" id="Q_1_3_Btn" onclick="CheckMCAnswer(1,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_2" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(3).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_2_0"><button class="FuncButton" id="Q_2_0_Btn" onclick="CheckMCAnswer(2,0,this)">?</button>&#160;&#160;A</li><li id="Q_2_1"><button class="FuncButton" id="Q_2_1_Btn" onclick="CheckMCAnswer(2,1,this)">?</button>&#160;&#160;B</li><li id="Q_2_2"><button class="FuncButton" id="Q_2_2_Btn" onclick="CheckMCAnswer(2,2,this)">?</button>&#160;&#160;C</li><li id="Q_2_3"><button class="FuncButton" id="Q_2_3_Btn" onclick="CheckMCAnswer(2,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_3" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(4).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_3_0"><button class="FuncButton" id="Q_3_0_Btn" onclick="CheckMCAnswer(3,0,this)">?</button>&#160;&#160;A</li><li id="Q_3_1"><button class="FuncButton" id="Q_3_1_Btn" onclick="CheckMCAnswer(3,1,this)">?</button>&#160;&#160;B</li><li id="Q_3_2"><button class="FuncButton" id="Q_3_2_Btn" onclick="CheckMCAnswer(3,2,this)">?</button>&#160;&#160;C</li><li id="Q_3_3"><button class="FuncButton" id="Q_3_3_Btn" onclick="CheckMCAnswer(3,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_4" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(5).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_4_0"><button class="FuncButton" id="Q_4_0_Btn" onclick="CheckMCAnswer(4,0,this)">?</button>&#160;&#160;A</li><li id="Q_4_1"><button class="FuncButton" id="Q_4_1_Btn" onclick="CheckMCAnswer(4,1,this)">?</button>&#160;&#160;B</li><li id="Q_4_2"><button class="FuncButton" id="Q_4_2_Btn" onclick="CheckMCAnswer(4,2,this)">?</button>&#160;&#160;C</li><li id="Q_4_3"><button class="FuncButton" id="Q_4_3_Btn" onclick="CheckMCAnswer(4,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_5" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(6).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_5_0"><button class="FuncButton" id="Q_5_0_Btn" onclick="CheckMCAnswer(5,0,this)">?</button>&#160;&#160;A</li><li id="Q_5_1"><button class="FuncButton" id="Q_5_1_Btn" onclick="CheckMCAnswer(5,1,this)">?</button>&#160;&#160;B</li><li id="Q_5_2"><button class="FuncButton" id="Q_5_2_Btn" onclick="CheckMCAnswer(5,2,this)">?</button>&#160;&#160;C</li><li id="Q_5_3"><button class="FuncButton" id="Q_5_3_Btn" onclick="CheckMCAnswer(5,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_6" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(7).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_6_0"><button class="FuncButton" id="Q_6_0_Btn" onclick="CheckMCAnswer(6,0,this)">?</button>&#160;&#160;A</li><li id="Q_6_1"><button class="FuncButton" id="Q_6_1_Btn" onclick="CheckMCAnswer(6,1,this)">?</button>&#160;&#160;B</li><li id="Q_6_2"><button class="FuncButton" id="Q_6_2_Btn" onclick="CheckMCAnswer(6,2,this)">?</button>&#160;&#160;C</li><li id="Q_6_3"><button class="FuncButton" id="Q_6_3_Btn" onclick="CheckMCAnswer(6,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_7" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(8).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_7_0"><button class="FuncButton" id="Q_7_0_Btn" onclick="CheckMCAnswer(7,0,this)">?</button>&#160;&#160;A</li><li id="Q_7_1"><button class="FuncButton" id="Q_7_1_Btn" onclick="CheckMCAnswer(7,1,this)">?</button>&#160;&#160;B</li><li id="Q_7_2"><button class="FuncButton" id="Q_7_2_Btn" onclick="CheckMCAnswer(7,2,this)">?</button>&#160;&#160;C</li><li id="Q_7_3"><button class="FuncButton" id="Q_7_3_Btn" onclick="CheckMCAnswer(7,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_8" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(9).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_8_0"><button class="FuncButton" id="Q_8_0_Btn" onclick="CheckMCAnswer(8,0,this)">?</button>&#160;&#160;A</li><li id="Q_8_1"><button class="FuncButton" id="Q_8_1_Btn" onclick="CheckMCAnswer(8,1,this)">?</button>&#160;&#160;B</li><li id="Q_8_2"><button class="FuncButton" id="Q_8_2_Btn" onclick="CheckMCAnswer(8,2,this)">?</button>&#160;&#160;C</li><li id="Q_8_3"><button class="FuncButton" id="Q_8_3_Btn" onclick="CheckMCAnswer(8,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_9" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(10).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_9_0"><button class="FuncButton" id="Q_9_0_Btn" onclick="CheckMCAnswer(9,0,this)">?</button>&#160;&#160;A</li><li id="Q_9_1"><button class="FuncButton" id="Q_9_1_Btn" onclick="CheckMCAnswer(9,1,this)">?</button>&#160;&#160;B</li><li id="Q_9_2"><button class="FuncButton" id="Q_9_2_Btn" onclick="CheckMCAnswer(9,2,this)">?</button>&#160;&#160;C</li><li id="Q_9_3"><button class="FuncButton" id="Q_9_3_Btn" onclick="CheckMCAnswer(9,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_10" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(11).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_10_0"><button class="FuncButton" id="Q_10_0_Btn" onclick="CheckMCAnswer(10,0,this)">?</button>&#160;&#160;A</li><li id="Q_10_1"><button class="FuncButton" id="Q_10_1_Btn" onclick="CheckMCAnswer(10,1,this)">?</button>&#160;&#160;B</li><li id="Q_10_2"><button class="FuncButton" id="Q_10_2_Btn" onclick="CheckMCAnswer(10,2,this)">?</button>&#160;&#160;C</li><li id="Q_10_3"><button class="FuncButton" id="Q_10_3_Btn" onclick="CheckMCAnswer(10,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_11" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(12).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_11_0"><button class="FuncButton" id="Q_11_0_Btn" onclick="CheckMCAnswer(11,0,this)">?</button>&#160;&#160;Aincomplete</li><li id="Q_11_1"><button class="FuncButton" id="Q_11_1_Btn" onclick="CheckMCAnswer(11,1,this)">?</button>&#160;&#160;B</li><li id="Q_11_2"><button class="FuncButton" id="Q_11_2_Btn" onclick="CheckMCAnswer(11,2,this)">?</button>&#160;&#160;C</li><li id="Q_11_3"><button class="FuncButton" id="Q_11_3_Btn" onclick="CheckMCAnswer(11,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_12" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(13).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_12_0"><button class="FuncButton" id="Q_12_0_Btn" onclick="CheckMCAnswer(12,0,this)">?</button>&#160;&#160;A</li><li id="Q_12_1"><button class="FuncButton" id="Q_12_1_Btn" onclick="CheckMCAnswer(12,1,this)">?</button>&#160;&#160;B</li><li id="Q_12_2"><button class="FuncButton" id="Q_12_2_Btn" onclick="CheckMCAnswer(12,2,this)">?</button>&#160;&#160;C</li><li id="Q_12_3"><button class="FuncButton" id="Q_12_3_Btn" onclick="CheckMCAnswer(12,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_13" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(14).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_13_0"><button class="FuncButton" id="Q_13_0_Btn" onclick="CheckMCAnswer(13,0,this)">?</button>&#160;&#160;A</li><li id="Q_13_1"><button class="FuncButton" id="Q_13_1_Btn" onclick="CheckMCAnswer(13,1,this)">?</button>&#160;&#160;B</li><li id="Q_13_2"><button class="FuncButton" id="Q_13_2_Btn" onclick="CheckMCAnswer(13,2,this)">?</button>&#160;&#160;C</li><li id="Q_13_3"><button class="FuncButton" id="Q_13_3_Btn" onclick="CheckMCAnswer(13,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_14" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(15).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_14_0"><button class="FuncButton" id="Q_14_0_Btn" onclick="CheckMCAnswer(14,0,this)">?</button>&#160;&#160;A</li><li id="Q_14_1"><button class="FuncButton" id="Q_14_1_Btn" onclick="CheckMCAnswer(14,1,this)">?</button>&#160;&#160;B</li><li id="Q_14_2"><button class="FuncButton" id="Q_14_2_Btn" onclick="CheckMCAnswer(14,2,this)">?</button>&#160;&#160;C</li><li id="Q_14_3"><button class="FuncButton" id="Q_14_3_Btn" onclick="CheckMCAnswer(14,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_15" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(16).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_15_0"><button class="FuncButton" id="Q_15_0_Btn" onclick="CheckMCAnswer(15,0,this)">?</button>&#160;&#160;A</li><li id="Q_15_1"><button class="FuncButton" id="Q_15_1_Btn" onclick="CheckMCAnswer(15,1,this)">?</button>&#160;&#160;B</li><li id="Q_15_2"><button class="FuncButton" id="Q_15_2_Btn" onclick="CheckMCAnswer(15,2,this)">?</button>&#160;&#160;C</li><li id="Q_15_3"><button class="FuncButton" id="Q_15_3_Btn" onclick="CheckMCAnswer(15,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_16" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(17).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_16_0"><button class="FuncButton" id="Q_16_0_Btn" onclick="CheckMCAnswer(16,0,this)">?</button>&#160;&#160;A</li><li id="Q_16_1"><button class="FuncButton" id="Q_16_1_Btn" onclick="CheckMCAnswer(16,1,this)">?</button>&#160;&#160;B</li><li id="Q_16_2"><button class="FuncButton" id="Q_16_2_Btn" onclick="CheckMCAnswer(16,2,this)">?</button>&#160;&#160;C</li><li id="Q_16_3"><button class="FuncButton" id="Q_16_3_Btn" onclick="CheckMCAnswer(16,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_17" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(18).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_17_0"><button class="FuncButton" id="Q_17_0_Btn" onclick="CheckMCAnswer(17,0,this)">?</button>&#160;&#160;A</li><li id="Q_17_1"><button class="FuncButton" id="Q_17_1_Btn" onclick="CheckMCAnswer(17,1,this)">?</button>&#160;&#160;B</li><li id="Q_17_2"><button class="FuncButton" id="Q_17_2_Btn" onclick="CheckMCAnswer(17,2,this)">?</button>&#160;&#160;C</li><li id="Q_17_3"><button class="FuncButton" id="Q_17_3_Btn" onclick="CheckMCAnswer(17,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_18" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(19).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_18_0"><button class="FuncButton" id="Q_18_0_Btn" onclick="CheckMCAnswer(18,0,this)">?</button>&#160;&#160;A</li><li id="Q_18_1"><button class="FuncButton" id="Q_18_1_Btn" onclick="CheckMCAnswer(18,1,this)">?</button>&#160;&#160;B</li><li id="Q_18_2"><button class="FuncButton" id="Q_18_2_Btn" onclick="CheckMCAnswer(18,2,this)">?</button>&#160;&#160;C</li><li id="Q_18_3"><button class="FuncButton" id="Q_18_3_Btn" onclick="CheckMCAnswer(18,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_19" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(20).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_19_0"><button class="FuncButton" id="Q_19_0_Btn" onclick="CheckMCAnswer(19,0,this)">?</button>&#160;&#160;A</li><li id="Q_19_1"><button class="FuncButton" id="Q_19_1_Btn" onclick="CheckMCAnswer(19,1,this)">?</button>&#160;&#160;B</li><li id="Q_19_2"><button class="FuncButton" id="Q_19_2_Btn" onclick="CheckMCAnswer(19,2,this)">?</button>&#160;&#160;C</li><li id="Q_19_3"><button class="FuncButton" id="Q_19_3_Btn" onclick="CheckMCAnswer(19,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_20" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(21).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_20_0"><button class="FuncButton" id="Q_20_0_Btn" onclick="CheckMCAnswer(20,0,this)">?</button>&#160;&#160;A</li><li id="Q_20_1"><button class="FuncButton" id="Q_20_1_Btn" onclick="CheckMCAnswer(20,1,this)">?</button>&#160;&#160;B</li><li id="Q_20_2"><button class="FuncButton" id="Q_20_2_Btn" onclick="CheckMCAnswer(20,2,this)">?</button>&#160;&#160;C</li><li id="Q_20_3"><button class="FuncButton" id="Q_20_3_Btn" onclick="CheckMCAnswer(20,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_21" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(22).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_21_0"><button class="FuncButton" id="Q_21_0_Btn" onclick="CheckMCAnswer(21,0,this)">?</button>&#160;&#160;A</li><li id="Q_21_1"><button class="FuncButton" id="Q_21_1_Btn" onclick="CheckMCAnswer(21,1,this)">?</button>&#160;&#160;B</li><li id="Q_21_2"><button class="FuncButton" id="Q_21_2_Btn" onclick="CheckMCAnswer(21,2,this)">?</button>&#160;&#160;C</li><li id="Q_21_3"><button class="FuncButton" id="Q_21_3_Btn" onclick="CheckMCAnswer(21,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_22" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(23).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_22_0"><button class="FuncButton" id="Q_22_0_Btn" onclick="CheckMCAnswer(22,0,this)">?</button>&#160;&#160;A</li><li id="Q_22_1"><button class="FuncButton" id="Q_22_1_Btn" onclick="CheckMCAnswer(22,1,this)">?</button>&#160;&#160;B</li><li id="Q_22_2"><button class="FuncButton" id="Q_22_2_Btn" onclick="CheckMCAnswer(22,2,this)">?</button>&#160;&#160;C</li><li id="Q_22_3"><button class="FuncButton" id="Q_22_3_Btn" onclick="CheckMCAnswer(22,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_23" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(24).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_23_0"><button class="FuncButton" id="Q_23_0_Btn" onclick="CheckMCAnswer(23,0,this)">?</button>&#160;&#160;A</li><li id="Q_23_1"><button class="FuncButton" id="Q_23_1_Btn" onclick="CheckMCAnswer(23,1,this)">?</button>&#160;&#160;B</li><li id="Q_23_2"><button class="FuncButton" id="Q_23_2_Btn" onclick="CheckMCAnswer(23,2,this)">?</button>&#160;&#160;C</li><li id="Q_23_3"><button class="FuncButton" id="Q_23_3_Btn" onclick="CheckMCAnswer(23,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_24" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(25).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_24_0"><button class="FuncButton" id="Q_24_0_Btn" onclick="CheckMCAnswer(24,0,this)">?</button>&#160;&#160;A</li><li id="Q_24_1"><button class="FuncButton" id="Q_24_1_Btn" onclick="CheckMCAnswer(24,1,this)">?</button>&#160;&#160;B</li><li id="Q_24_2"><button class="FuncButton" id="Q_24_2_Btn" onclick="CheckMCAnswer(24,2,this)">?</button>&#160;&#160;C</li><li id="Q_24_3"><button class="FuncButton" id="Q_24_3_Btn" onclick="CheckMCAnswer(24,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_25" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(26).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_25_0"><button class="FuncButton" id="Q_25_0_Btn" onclick="CheckMCAnswer(25,0,this)">?</button>&#160;&#160;A</li><li id="Q_25_1"><button class="FuncButton" id="Q_25_1_Btn" onclick="CheckMCAnswer(25,1,this)">?</button>&#160;&#160;B</li><li id="Q_25_2"><button class="FuncButton" id="Q_25_2_Btn" onclick="CheckMCAnswer(25,2,this)">?</button>&#160;&#160;C</li><li id="Q_25_3"><button class="FuncButton" id="Q_25_3_Btn" onclick="CheckMCAnswer(25,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_26" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(27).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_26_0"><button class="FuncButton" id="Q_26_0_Btn" onclick="CheckMCAnswer(26,0,this)">?</button>&#160;&#160;A</li><li id="Q_26_1"><button class="FuncButton" id="Q_26_1_Btn" onclick="CheckMCAnswer(26,1,this)">?</button>&#160;&#160;B</li><li id="Q_26_2"><button class="FuncButton" id="Q_26_2_Btn" onclick="CheckMCAnswer(26,2,this)">?</button>&#160;&#160;C</li><li id="Q_26_3"><button class="FuncButton" id="Q_26_3_Btn" onclick="CheckMCAnswer(26,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_27" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(28).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_27_0"><button class="FuncButton" id="Q_27_0_Btn" onclick="CheckMCAnswer(27,0,this)">?</button>&#160;&#160;A</li><li id="Q_27_1"><button class="FuncButton" id="Q_27_1_Btn" onclick="CheckMCAnswer(27,1,this)">?</button>&#160;&#160;B</li><li id="Q_27_2"><button class="FuncButton" id="Q_27_2_Btn" onclick="CheckMCAnswer(27,2,this)">?</button>&#160;&#160;C</li><li id="Q_27_3"><button class="FuncButton" id="Q_27_3_Btn" onclick="CheckMCAnswer(27,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_28" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(29).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_28_0"><button class="FuncButton" id="Q_28_0_Btn" onclick="CheckMCAnswer(28,0,this)">?</button>&#160;&#160;A</li><li id="Q_28_1"><button class="FuncButton" id="Q_28_1_Btn" onclick="CheckMCAnswer(28,1,this)">?</button>&#160;&#160;B</li><li id="Q_28_2"><button class="FuncButton" id="Q_28_2_Btn" onclick="CheckMCAnswer(28,2,this)">?</button>&#160;&#160;C</li><li id="Q_28_3"><button class="FuncButton" id="Q_28_3_Btn" onclick="CheckMCAnswer(28,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_29" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(30).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_29_0"><button class="FuncButton" id="Q_29_0_Btn" onclick="CheckMCAnswer(29,0,this)">?</button>&#160;&#160;A</li><li id="Q_29_1"><button class="FuncButton" id="Q_29_1_Btn" onclick="CheckMCAnswer(29,1,this)">?</button>&#160;&#160;B</li><li id="Q_29_2"><button class="FuncButton" id="Q_29_2_Btn" onclick="CheckMCAnswer(29,2,this)">?</button>&#160;&#160;C</li><li id="Q_29_3"><button class="FuncButton" id="Q_29_3_Btn" onclick="CheckMCAnswer(29,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_30" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(31).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_30_0"><button class="FuncButton" id="Q_30_0_Btn" onclick="CheckMCAnswer(30,0,this)">?</button>&#160;&#160;A</li><li id="Q_30_1"><button class="FuncButton" id="Q_30_1_Btn" onclick="CheckMCAnswer(30,1,this)">?</button>&#160;&#160;B</li><li id="Q_30_2"><button class="FuncButton" id="Q_30_2_Btn" onclick="CheckMCAnswer(30,2,this)">?</button>&#160;&#160;C</li><li id="Q_30_3"><button class="FuncButton" id="Q_30_3_Btn" onclick="CheckMCAnswer(30,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_31" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(32).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_31_0"><button class="FuncButton" id="Q_31_0_Btn" onclick="CheckMCAnswer(31,0,this)">?</button>&#160;&#160;A</li><li id="Q_31_1"><button class="FuncButton" id="Q_31_1_Btn" onclick="CheckMCAnswer(31,1,this)">?</button>&#160;&#160;B</li><li id="Q_31_2"><button class="FuncButton" id="Q_31_2_Btn" onclick="CheckMCAnswer(31,2,this)">?</button>&#160;&#160;C</li><li id="Q_31_3"><button class="FuncButton" id="Q_31_3_Btn" onclick="CheckMCAnswer(31,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_32" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(33).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_32_0"><button class="FuncButton" id="Q_32_0_Btn" onclick="CheckMCAnswer(32,0,this)">?</button>&#160;&#160;A</li><li id="Q_32_1"><button class="FuncButton" id="Q_32_1_Btn" onclick="CheckMCAnswer(32,1,this)">?</button>&#160;&#160;B</li><li id="Q_32_2"><button class="FuncButton" id="Q_32_2_Btn" onclick="CheckMCAnswer(32,2,this)">?</button>&#160;&#160;C</li><li id="Q_32_3"><button class="FuncButton" id="Q_32_3_Btn" onclick="CheckMCAnswer(32,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_33" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(34).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_33_0"><button class="FuncButton" id="Q_33_0_Btn" onclick="CheckMCAnswer(33,0,this)">?</button>&#160;&#160;A</li><li id="Q_33_1"><button class="FuncButton" id="Q_33_1_Btn" onclick="CheckMCAnswer(33,1,this)">?</button>&#160;&#160;B</li><li id="Q_33_2"><button class="FuncButton" id="Q_33_2_Btn" onclick="CheckMCAnswer(33,2,this)">?</button>&#160;&#160;C</li><li id="Q_33_3"><button class="FuncButton" id="Q_33_3_Btn" onclick="CheckMCAnswer(33,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_34" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(35).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_34_0"><button class="FuncButton" id="Q_34_0_Btn" onclick="CheckMCAnswer(34,0,this)">?</button>&#160;&#160;A</li><li id="Q_34_1"><button class="FuncButton" id="Q_34_1_Btn" onclick="CheckMCAnswer(34,1,this)">?</button>&#160;&#160;B</li><li id="Q_34_2"><button class="FuncButton" id="Q_34_2_Btn" onclick="CheckMCAnswer(34,2,this)">?</button>&#160;&#160;C</li><li id="Q_34_3"><button class="FuncButton" id="Q_34_3_Btn" onclick="CheckMCAnswer(34,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_35" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(36).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_35_0"><button class="FuncButton" id="Q_35_0_Btn" onclick="CheckMCAnswer(35,0,this)">?</button>&#160;&#160;A</li><li id="Q_35_1"><button class="FuncButton" id="Q_35_1_Btn" onclick="CheckMCAnswer(35,1,this)">?</button>&#160;&#160;B</li><li id="Q_35_2"><button class="FuncButton" id="Q_35_2_Btn" onclick="CheckMCAnswer(35,2,this)">?</button>&#160;&#160;C</li><li id="Q_35_3"><button class="FuncButton" id="Q_35_3_Btn" onclick="CheckMCAnswer(35,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_36" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(37).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_36_0"><button class="FuncButton" id="Q_36_0_Btn" onclick="CheckMCAnswer(36,0,this)">?</button>&#160;&#160;A</li><li id="Q_36_1"><button class="FuncButton" id="Q_36_1_Btn" onclick="CheckMCAnswer(36,1,this)">?</button>&#160;&#160;B</li><li id="Q_36_2"><button class="FuncButton" id="Q_36_2_Btn" onclick="CheckMCAnswer(36,2,this)">?</button>&#160;&#160;C</li><li id="Q_36_3"><button class="FuncButton" id="Q_36_3_Btn" onclick="CheckMCAnswer(36,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_37" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(38).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_37_0"><button class="FuncButton" id="Q_37_0_Btn" onclick="CheckMCAnswer(37,0,this)">?</button>&#160;&#160;A</li><li id="Q_37_1"><button class="FuncButton" id="Q_37_1_Btn" onclick="CheckMCAnswer(37,1,this)">?</button>&#160;&#160;B</li><li id="Q_37_2"><button class="FuncButton" id="Q_37_2_Btn" onclick="CheckMCAnswer(37,2,this)">?</button>&#160;&#160;C</li><li id="Q_37_3"><button class="FuncButton" id="Q_37_3_Btn" onclick="CheckMCAnswer(37,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_38" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(39).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_38_0"><button class="FuncButton" id="Q_38_0_Btn" onclick="CheckMCAnswer(38,0,this)">?</button>&#160;&#160;A</li><li id="Q_38_1"><button class="FuncButton" id="Q_38_1_Btn" onclick="CheckMCAnswer(38,1,this)">?</button>&#160;&#160;B</li><li id="Q_38_2"><button class="FuncButton" id="Q_38_2_Btn" onclick="CheckMCAnswer(38,2,this)">?</button>&#160;&#160;C</li><li id="Q_38_3"><button class="FuncButton" id="Q_38_3_Btn" onclick="CheckMCAnswer(38,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_39" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(40).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_39_0"><button class="FuncButton" id="Q_39_0_Btn" onclick="CheckMCAnswer(39,0,this)">?</button>&#160;&#160;A</li><li id="Q_39_1"><button class="FuncButton" id="Q_39_1_Btn" onclick="CheckMCAnswer(39,1,this)">?</button>&#160;&#160;B</li><li id="Q_39_2"><button class="FuncButton" id="Q_39_2_Btn" onclick="CheckMCAnswer(39,2,this)">?</button>&#160;&#160;C</li><li id="Q_39_3"><button class="FuncButton" id="Q_39_3_Btn" onclick="CheckMCAnswer(39,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_40" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(41).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_40_0"><button class="FuncButton" id="Q_40_0_Btn" onclick="CheckMCAnswer(40,0,this)">?</button>&#160;&#160;A</li><li id="Q_40_1"><button class="FuncButton" id="Q_40_1_Btn" onclick="CheckMCAnswer(40,1,this)">?</button>&#160;&#160;B</li><li id="Q_40_2"><button class="FuncButton" id="Q_40_2_Btn" onclick="CheckMCAnswer(40,2,this)">?</button>&#160;&#160;C</li><li id="Q_40_3"><button class="FuncButton" id="Q_40_3_Btn" onclick="CheckMCAnswer(40,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_41" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(42).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_41_0"><button class="FuncButton" id="Q_41_0_Btn" onclick="CheckMCAnswer(41,0,this)">?</button>&#160;&#160;A</li><li id="Q_41_1"><button class="FuncButton" id="Q_41_1_Btn" onclick="CheckMCAnswer(41,1,this)">?</button>&#160;&#160;B</li><li id="Q_41_2"><button class="FuncButton" id="Q_41_2_Btn" onclick="CheckMCAnswer(41,2,this)">?</button>&#160;&#160;C</li><li id="Q_41_3"><button class="FuncButton" id="Q_41_3_Btn" onclick="CheckMCAnswer(41,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_42" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(43).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_42_0"><button class="FuncButton" id="Q_42_0_Btn" onclick="CheckMCAnswer(42,0,this)">?</button>&#160;&#160;A</li><li id="Q_42_1"><button class="FuncButton" id="Q_42_1_Btn" onclick="CheckMCAnswer(42,1,this)">?</button>&#160;&#160;B</li><li id="Q_42_2"><button class="FuncButton" id="Q_42_2_Btn" onclick="CheckMCAnswer(42,2,this)">?</button>&#160;&#160;C</li><li id="Q_42_3"><button class="FuncButton" id="Q_42_3_Btn" onclick="CheckMCAnswer(42,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_43" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(44).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_43_0"><button class="FuncButton" id="Q_43_0_Btn" onclick="CheckMCAnswer(43,0,this)">?</button>&#160;&#160;A</li><li id="Q_43_1"><button class="FuncButton" id="Q_43_1_Btn" onclick="CheckMCAnswer(43,1,this)">?</button>&#160;&#160;B</li><li id="Q_43_2"><button class="FuncButton" id="Q_43_2_Btn" onclick="CheckMCAnswer(43,2,this)">?</button>&#160;&#160;C</li><li id="Q_43_3"><button class="FuncButton" id="Q_43_3_Btn" onclick="CheckMCAnswer(43,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_44" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(45).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_44_0"><button class="FuncButton" id="Q_44_0_Btn" onclick="CheckMCAnswer(44,0,this)">?</button>&#160;&#160;A</li><li id="Q_44_1"><button class="FuncButton" id="Q_44_1_Btn" onclick="CheckMCAnswer(44,1,this)">?</button>&#160;&#160;B</li><li id="Q_44_2"><button class="FuncButton" id="Q_44_2_Btn" onclick="CheckMCAnswer(44,2,this)">?</button>&#160;&#160;C</li><li id="Q_44_3"><button class="FuncButton" id="Q_44_3_Btn" onclick="CheckMCAnswer(44,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_45" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(46).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_45_0"><button class="FuncButton" id="Q_45_0_Btn" onclick="CheckMCAnswer(45,0,this)">?</button>&#160;&#160;A</li><li id="Q_45_1"><button class="FuncButton" id="Q_45_1_Btn" onclick="CheckMCAnswer(45,1,this)">?</button>&#160;&#160;B</li><li id="Q_45_2"><button class="FuncButton" id="Q_45_2_Btn" onclick="CheckMCAnswer(45,2,this)">?</button>&#160;&#160;C</li><li id="Q_45_3"><button class="FuncButton" id="Q_45_3_Btn" onclick="CheckMCAnswer(45,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_46" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(47).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_46_0"><button class="FuncButton" id="Q_46_0_Btn" onclick="CheckMCAnswer(46,0,this)">?</button>&#160;&#160;A</li><li id="Q_46_1"><button class="FuncButton" id="Q_46_1_Btn" onclick="CheckMCAnswer(46,1,this)">?</button>&#160;&#160;B</li><li id="Q_46_2"><button class="FuncButton" id="Q_46_2_Btn" onclick="CheckMCAnswer(46,2,this)">?</button>&#160;&#160;C</li><li id="Q_46_3"><button class="FuncButton" id="Q_46_3_Btn" onclick="CheckMCAnswer(46,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_47" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(48).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_47_0"><button class="FuncButton" id="Q_47_0_Btn" onclick="CheckMCAnswer(47,0,this)">?</button>&#160;&#160;A</li><li id="Q_47_1"><button class="FuncButton" id="Q_47_1_Btn" onclick="CheckMCAnswer(47,1,this)">?</button>&#160;&#160;B</li><li id="Q_47_2"><button class="FuncButton" id="Q_47_2_Btn" onclick="CheckMCAnswer(47,2,this)">?</button>&#160;&#160;C</li><li id="Q_47_3"><button class="FuncButton" id="Q_47_3_Btn" onclick="CheckMCAnswer(47,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_48" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(49).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_48_0"><button class="FuncButton" id="Q_48_0_Btn" onclick="CheckMCAnswer(48,0,this)">?</button>&#160;&#160;A</li><li id="Q_48_1"><button class="FuncButton" id="Q_48_1_Btn" onclick="CheckMCAnswer(48,1,this)">?</button>&#160;&#160;B</li><li id="Q_48_2"><button class="FuncButton" id="Q_48_2_Btn" onclick="CheckMCAnswer(48,2,this)">?</button>&#160;&#160;C</li><li id="Q_48_3"><button class="FuncButton" id="Q_48_3_Btn" onclick="CheckMCAnswer(48,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_49" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(50).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_49_0"><button class="FuncButton" id="Q_49_0_Btn" onclick="CheckMCAnswer(49,0,this)">?</button>&#160;&#160;A</li><li id="Q_49_1"><button class="FuncButton" id="Q_49_1_Btn" onclick="CheckMCAnswer(49,1,this)">?</button>&#160;&#160;B</li><li id="Q_49_2"><button class="FuncButton" id="Q_49_2_Btn" onclick="CheckMCAnswer(49,2,this)">?</button>&#160;&#160;C</li><li id="Q_49_3"><button class="FuncButton" id="Q_49_3_Btn" onclick="CheckMCAnswer(49,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_50" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(51).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_50_0"><button class="FuncButton" id="Q_50_0_Btn" onclick="CheckMCAnswer(50,0,this)">?</button>&#160;&#160;A</li><li id="Q_50_1"><button class="FuncButton" id="Q_50_1_Btn" onclick="CheckMCAnswer(50,1,this)">?</button>&#160;&#160;B</li><li id="Q_50_2"><button class="FuncButton" id="Q_50_2_Btn" onclick="CheckMCAnswer(50,2,this)">?</button>&#160;&#160;C</li><li id="Q_50_3"><button class="FuncButton" id="Q_50_3_Btn" onclick="CheckMCAnswer(50,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_51" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(52).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_51_0"><button class="FuncButton" id="Q_51_0_Btn" onclick="CheckMCAnswer(51,0,this)">?</button>&#160;&#160;A</li><li id="Q_51_1"><button class="FuncButton" id="Q_51_1_Btn" onclick="CheckMCAnswer(51,1,this)">?</button>&#160;&#160;B</li><li id="Q_51_2"><button class="FuncButton" id="Q_51_2_Btn" onclick="CheckMCAnswer(51,2,this)">?</button>&#160;&#160;C</li><li id="Q_51_3"><button class="FuncButton" id="Q_51_3_Btn" onclick="CheckMCAnswer(51,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_52" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(53).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_52_0"><button class="FuncButton" id="Q_52_0_Btn" onclick="CheckMCAnswer(52,0,this)">?</button>&#160;&#160;A</li><li id="Q_52_1"><button class="FuncButton" id="Q_52_1_Btn" onclick="CheckMCAnswer(52,1,this)">?</button>&#160;&#160;B</li><li id="Q_52_2"><button class="FuncButton" id="Q_52_2_Btn" onclick="CheckMCAnswer(52,2,this)">?</button>&#160;&#160;C</li><li id="Q_52_3"><button class="FuncButton" id="Q_52_3_Btn" onclick="CheckMCAnswer(52,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_53" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(54).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_53_0"><button class="FuncButton" id="Q_53_0_Btn" onclick="CheckMCAnswer(53,0,this)">?</button>&#160;&#160;A</li><li id="Q_53_1"><button class="FuncButton" id="Q_53_1_Btn" onclick="CheckMCAnswer(53,1,this)">?</button>&#160;&#160;B</li><li id="Q_53_2"><button class="FuncButton" id="Q_53_2_Btn" onclick="CheckMCAnswer(53,2,this)">?</button>&#160;&#160;C</li><li id="Q_53_3"><button class="FuncButton" id="Q_53_3_Btn" onclick="CheckMCAnswer(53,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_54" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(55).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_54_0"><button class="FuncButton" id="Q_54_0_Btn" onclick="CheckMCAnswer(54,0,this)">?</button>&#160;&#160;A</li><li id="Q_54_1"><button class="FuncButton" id="Q_54_1_Btn" onclick="CheckMCAnswer(54,1,this)">?</button>&#160;&#160;B</li><li id="Q_54_2"><button class="FuncButton" id="Q_54_2_Btn" onclick="CheckMCAnswer(54,2,this)">?</button>&#160;&#160;C</li><li id="Q_54_3"><button class="FuncButton" id="Q_54_3_Btn" onclick="CheckMCAnswer(54,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_55" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(56).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_55_0"><button class="FuncButton" id="Q_55_0_Btn" onclick="CheckMCAnswer(55,0,this)">?</button>&#160;&#160;A</li><li id="Q_55_1"><button class="FuncButton" id="Q_55_1_Btn" onclick="CheckMCAnswer(55,1,this)">?</button>&#160;&#160;B</li><li id="Q_55_2"><button class="FuncButton" id="Q_55_2_Btn" onclick="CheckMCAnswer(55,2,this)">?</button>&#160;&#160;C</li><li id="Q_55_3"><button class="FuncButton" id="Q_55_3_Btn" onclick="CheckMCAnswer(55,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_56" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(57).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_56_0"><button class="FuncButton" id="Q_56_0_Btn" onclick="CheckMCAnswer(56,0,this)">?</button>&#160;&#160;A</li><li id="Q_56_1"><button class="FuncButton" id="Q_56_1_Btn" onclick="CheckMCAnswer(56,1,this)">?</button>&#160;&#160;B</li><li id="Q_56_2"><button class="FuncButton" id="Q_56_2_Btn" onclick="CheckMCAnswer(56,2,this)">?</button>&#160;&#160;C</li><li id="Q_56_3"><button class="FuncButton" id="Q_56_3_Btn" onclick="CheckMCAnswer(56,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_57" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(58).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_57_0"><button class="FuncButton" id="Q_57_0_Btn" onclick="CheckMCAnswer(57,0,this)">?</button>&#160;&#160;A</li><li id="Q_57_1"><button class="FuncButton" id="Q_57_1_Btn" onclick="CheckMCAnswer(57,1,this)">?</button>&#160;&#160;B</li><li id="Q_57_2"><button class="FuncButton" id="Q_57_2_Btn" onclick="CheckMCAnswer(57,2,this)">?</button>&#160;&#160;C</li><li id="Q_57_3"><button class="FuncButton" id="Q_57_3_Btn" onclick="CheckMCAnswer(57,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_58" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(59).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_58_0"><button class="FuncButton" id="Q_58_0_Btn" onclick="CheckMCAnswer(58,0,this)">?</button>&#160;&#160;A</li><li id="Q_58_1"><button class="FuncButton" id="Q_58_1_Btn" onclick="CheckMCAnswer(58,1,this)">?</button>&#160;&#160;B</li><li id="Q_58_2"><button class="FuncButton" id="Q_58_2_Btn" onclick="CheckMCAnswer(58,2,this)">?</button>&#160;&#160;C</li><li id="Q_58_3"><button class="FuncButton" id="Q_58_3_Btn" onclick="CheckMCAnswer(58,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_59" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(60).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_59_0"><button class="FuncButton" id="Q_59_0_Btn" onclick="CheckMCAnswer(59,0,this)">?</button>&#160;&#160;A</li><li id="Q_59_1"><button class="FuncButton" id="Q_59_1_Btn" onclick="CheckMCAnswer(59,1,this)">?</button>&#160;&#160;B</li><li id="Q_59_2"><button class="FuncButton" id="Q_59_2_Btn" onclick="CheckMCAnswer(59,2,this)">?</button>&#160;&#160;C</li><li id="Q_59_3"><button class="FuncButton" id="Q_59_3_Btn" onclick="CheckMCAnswer(59,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_60" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(61).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_60_0"><button class="FuncButton" id="Q_60_0_Btn" onclick="CheckMCAnswer(60,0,this)">?</button>&#160;&#160;A</li><li id="Q_60_1"><button class="FuncButton" id="Q_60_1_Btn" onclick="CheckMCAnswer(60,1,this)">?</button>&#160;&#160;B</li><li id="Q_60_2"><button class="FuncButton" id="Q_60_2_Btn" onclick="CheckMCAnswer(60,2,this)">?</button>&#160;&#160;C</li><li id="Q_60_3"><button class="FuncButton" id="Q_60_3_Btn" onclick="CheckMCAnswer(60,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_61" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(62).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_61_0"><button class="FuncButton" id="Q_61_0_Btn" onclick="CheckMCAnswer(61,0,this)">?</button>&#160;&#160;A</li><li id="Q_61_1"><button class="FuncButton" id="Q_61_1_Btn" onclick="CheckMCAnswer(61,1,this)">?</button>&#160;&#160;B</li><li id="Q_61_2"><button class="FuncButton" id="Q_61_2_Btn" onclick="CheckMCAnswer(61,2,this)">?</button>&#160;&#160;C</li><li id="Q_61_3"><button class="FuncButton" id="Q_61_3_Btn" onclick="CheckMCAnswer(61,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_62" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(63).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_62_0"><button class="FuncButton" id="Q_62_0_Btn" onclick="CheckMCAnswer(62,0,this)">?</button>&#160;&#160;A</li><li id="Q_62_1"><button class="FuncButton" id="Q_62_1_Btn" onclick="CheckMCAnswer(62,1,this)">?</button>&#160;&#160;B</li><li id="Q_62_2"><button class="FuncButton" id="Q_62_2_Btn" onclick="CheckMCAnswer(62,2,this)">?</button>&#160;&#160;C</li><li id="Q_62_3"><button class="FuncButton" id="Q_62_3_Btn" onclick="CheckMCAnswer(62,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_63" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(64).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_63_0"><button class="FuncButton" id="Q_63_0_Btn" onclick="CheckMCAnswer(63,0,this)">?</button>&#160;&#160;A</li><li id="Q_63_1"><button class="FuncButton" id="Q_63_1_Btn" onclick="CheckMCAnswer(63,1,this)">?</button>&#160;&#160;B</li><li id="Q_63_2"><button class="FuncButton" id="Q_63_2_Btn" onclick="CheckMCAnswer(63,2,this)">?</button>&#160;&#160;C</li><li id="Q_63_3"><button class="FuncButton" id="Q_63_3_Btn" onclick="CheckMCAnswer(63,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_64" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(65).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_64_0"><button class="FuncButton" id="Q_64_0_Btn" onclick="CheckMCAnswer(64,0,this)">?</button>&#160;&#160;A</li><li id="Q_64_1"><button class="FuncButton" id="Q_64_1_Btn" onclick="CheckMCAnswer(64,1,this)">?</button>&#160;&#160;B</li><li id="Q_64_2"><button class="FuncButton" id="Q_64_2_Btn" onclick="CheckMCAnswer(64,2,this)">?</button>&#160;&#160;C</li><li id="Q_64_3"><button class="FuncButton" id="Q_64_3_Btn" onclick="CheckMCAnswer(64,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_65" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(66).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_65_0"><button class="FuncButton" id="Q_65_0_Btn" onclick="CheckMCAnswer(65,0,this)">?</button>&#160;&#160;A</li><li id="Q_65_1"><button class="FuncButton" id="Q_65_1_Btn" onclick="CheckMCAnswer(65,1,this)">?</button>&#160;&#160;B</li><li id="Q_65_2"><button class="FuncButton" id="Q_65_2_Btn" onclick="CheckMCAnswer(65,2,this)">?</button>&#160;&#160;C</li><li id="Q_65_3"><button class="FuncButton" id="Q_65_3_Btn" onclick="CheckMCAnswer(65,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_66" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(67).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_66_0"><button class="FuncButton" id="Q_66_0_Btn" onclick="CheckMCAnswer(66,0,this)">?</button>&#160;&#160;A</li><li id="Q_66_1"><button class="FuncButton" id="Q_66_1_Btn" onclick="CheckMCAnswer(66,1,this)">?</button>&#160;&#160;B</li><li id="Q_66_2"><button class="FuncButton" id="Q_66_2_Btn" onclick="CheckMCAnswer(66,2,this)">?</button>&#160;&#160;C</li><li id="Q_66_3"><button class="FuncButton" id="Q_66_3_Btn" onclick="CheckMCAnswer(66,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_67" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(68).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_67_0"><button class="FuncButton" id="Q_67_0_Btn" onclick="CheckMCAnswer(67,0,this)">?</button>&#160;&#160;A</li><li id="Q_67_1"><button class="FuncButton" id="Q_67_1_Btn" onclick="CheckMCAnswer(67,1,this)">?</button>&#160;&#160;B</li><li id="Q_67_2"><button class="FuncButton" id="Q_67_2_Btn" onclick="CheckMCAnswer(67,2,this)">?</button>&#160;&#160;C</li><li id="Q_67_3"><button class="FuncButton" id="Q_67_3_Btn" onclick="CheckMCAnswer(67,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_68" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(69).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_68_0"><button class="FuncButton" id="Q_68_0_Btn" onclick="CheckMCAnswer(68,0,this)">?</button>&#160;&#160;A</li><li id="Q_68_1"><button class="FuncButton" id="Q_68_1_Btn" onclick="CheckMCAnswer(68,1,this)">?</button>&#160;&#160;B</li><li id="Q_68_2"><button class="FuncButton" id="Q_68_2_Btn" onclick="CheckMCAnswer(68,2,this)">?</button>&#160;&#160;C</li><li id="Q_68_3"><button class="FuncButton" id="Q_68_3_Btn" onclick="CheckMCAnswer(68,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_69" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(70).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_69_0"><button class="FuncButton" id="Q_69_0_Btn" onclick="CheckMCAnswer(69,0,this)">?</button>&#160;&#160;A</li><li id="Q_69_1"><button class="FuncButton" id="Q_69_1_Btn" onclick="CheckMCAnswer(69,1,this)">?</button>&#160;&#160;B</li><li id="Q_69_2"><button class="FuncButton" id="Q_69_2_Btn" onclick="CheckMCAnswer(69,2,this)">?</button>&#160;&#160;C</li><li id="Q_69_3"><button class="FuncButton" id="Q_69_3_Btn" onclick="CheckMCAnswer(69,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_70" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(71).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_70_0"><button class="FuncButton" id="Q_70_0_Btn" onclick="CheckMCAnswer(70,0,this)">?</button>&#160;&#160;A</li><li id="Q_70_1"><button class="FuncButton" id="Q_70_1_Btn" onclick="CheckMCAnswer(70,1,this)">?</button>&#160;&#160;B</li><li id="Q_70_2"><button class="FuncButton" id="Q_70_2_Btn" onclick="CheckMCAnswer(70,2,this)">?</button>&#160;&#160;C</li><li id="Q_70_3"><button class="FuncButton" id="Q_70_3_Btn" onclick="CheckMCAnswer(70,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_71" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(72).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_71_0"><button class="FuncButton" id="Q_71_0_Btn" onclick="CheckMCAnswer(71,0,this)">?</button>&#160;&#160;A</li><li id="Q_71_1"><button class="FuncButton" id="Q_71_1_Btn" onclick="CheckMCAnswer(71,1,this)">?</button>&#160;&#160;B</li><li id="Q_71_2"><button class="FuncButton" id="Q_71_2_Btn" onclick="CheckMCAnswer(71,2,this)">?</button>&#160;&#160;C</li><li id="Q_71_3"><button class="FuncButton" id="Q_71_3_Btn" onclick="CheckMCAnswer(71,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_72" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(73).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_72_0"><button class="FuncButton" id="Q_72_0_Btn" onclick="CheckMCAnswer(72,0,this)">?</button>&#160;&#160;A</li><li id="Q_72_1"><button class="FuncButton" id="Q_72_1_Btn" onclick="CheckMCAnswer(72,1,this)">?</button>&#160;&#160;B</li><li id="Q_72_2"><button class="FuncButton" id="Q_72_2_Btn" onclick="CheckMCAnswer(72,2,this)">?</button>&#160;&#160;C</li><li id="Q_72_3"><button class="FuncButton" id="Q_72_3_Btn" onclick="CheckMCAnswer(72,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_73" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(74).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_73_0"><button class="FuncButton" id="Q_73_0_Btn" onclick="CheckMCAnswer(73,0,this)">?</button>&#160;&#160;A</li><li id="Q_73_1"><button class="FuncButton" id="Q_73_1_Btn" onclick="CheckMCAnswer(73,1,this)">?</button>&#160;&#160;B</li><li id="Q_73_2"><button class="FuncButton" id="Q_73_2_Btn" onclick="CheckMCAnswer(73,2,this)">?</button>&#160;&#160;C</li><li id="Q_73_3"><button class="FuncButton" id="Q_73_3_Btn" onclick="CheckMCAnswer(73,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_74" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(75).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_74_0"><button class="FuncButton" id="Q_74_0_Btn" onclick="CheckMCAnswer(74,0,this)">?</button>&#160;&#160;A</li><li id="Q_74_1"><button class="FuncButton" id="Q_74_1_Btn" onclick="CheckMCAnswer(74,1,this)">?</button>&#160;&#160;B</li><li id="Q_74_2"><button class="FuncButton" id="Q_74_2_Btn" onclick="CheckMCAnswer(74,2,this)">?</button>&#160;&#160;C</li><li id="Q_74_3"><button class="FuncButton" id="Q_74_3_Btn" onclick="CheckMCAnswer(74,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_75" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(76).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_75_0"><button class="FuncButton" id="Q_75_0_Btn" onclick="CheckMCAnswer(75,0,this)">?</button>&#160;&#160;A</li><li id="Q_75_1"><button class="FuncButton" id="Q_75_1_Btn" onclick="CheckMCAnswer(75,1,this)">?</button>&#160;&#160;B</li><li id="Q_75_2"><button class="FuncButton" id="Q_75_2_Btn" onclick="CheckMCAnswer(75,2,this)">?</button>&#160;&#160;C</li><li id="Q_75_3"><button class="FuncButton" id="Q_75_3_Btn" onclick="CheckMCAnswer(75,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_76" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(77).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_76_0"><button class="FuncButton" id="Q_76_0_Btn" onclick="CheckMCAnswer(76,0,this)">?</button>&#160;&#160;A</li><li id="Q_76_1"><button class="FuncButton" id="Q_76_1_Btn" onclick="CheckMCAnswer(76,1,this)">?</button>&#160;&#160;B</li><li id="Q_76_2"><button class="FuncButton" id="Q_76_2_Btn" onclick="CheckMCAnswer(76,2,this)">?</button>&#160;&#160;C</li><li id="Q_76_3"><button class="FuncButton" id="Q_76_3_Btn" onclick="CheckMCAnswer(76,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_77" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(78).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_77_0"><button class="FuncButton" id="Q_77_0_Btn" onclick="CheckMCAnswer(77,0,this)">?</button>&#160;&#160;A</li><li id="Q_77_1"><button class="FuncButton" id="Q_77_1_Btn" onclick="CheckMCAnswer(77,1,this)">?</button>&#160;&#160;B</li><li id="Q_77_2"><button class="FuncButton" id="Q_77_2_Btn" onclick="CheckMCAnswer(77,2,this)">?</button>&#160;&#160;C</li><li id="Q_77_3"><button class="FuncButton" id="Q_77_3_Btn" onclick="CheckMCAnswer(77,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_78" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(79).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_78_0"><button class="FuncButton" id="Q_78_0_Btn" onclick="CheckMCAnswer(78,0,this)">?</button>&#160;&#160;A</li><li id="Q_78_1"><button class="FuncButton" id="Q_78_1_Btn" onclick="CheckMCAnswer(78,1,this)">?</button>&#160;&#160;B</li><li id="Q_78_2"><button class="FuncButton" id="Q_78_2_Btn" onclick="CheckMCAnswer(78,2,this)">?</button>&#160;&#160;C</li><li id="Q_78_3"><button class="FuncButton" id="Q_78_3_Btn" onclick="CheckMCAnswer(78,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_79" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(80).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_79_0"><button class="FuncButton" id="Q_79_0_Btn" onclick="CheckMCAnswer(79,0,this)">?</button>&#160;&#160;A</li><li id="Q_79_1"><button class="FuncButton" id="Q_79_1_Btn" onclick="CheckMCAnswer(79,1,this)">?</button>&#160;&#160;B</li><li id="Q_79_2"><button class="FuncButton" id="Q_79_2_Btn" onclick="CheckMCAnswer(79,2,this)">?</button>&#160;&#160;C</li><li id="Q_79_3"><button class="FuncButton" id="Q_79_3_Btn" onclick="CheckMCAnswer(79,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_80" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(81).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_80_0"><button class="FuncButton" id="Q_80_0_Btn" onclick="CheckMCAnswer(80,0,this)">?</button>&#160;&#160;A</li><li id="Q_80_1"><button class="FuncButton" id="Q_80_1_Btn" onclick="CheckMCAnswer(80,1,this)">?</button>&#160;&#160;B</li><li id="Q_80_2"><button class="FuncButton" id="Q_80_2_Btn" onclick="CheckMCAnswer(80,2,this)">?</button>&#160;&#160;C</li><li id="Q_80_3"><button class="FuncButton" id="Q_80_3_Btn" onclick="CheckMCAnswer(80,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_81" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(82).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_81_0"><button class="FuncButton" id="Q_81_0_Btn" onclick="CheckMCAnswer(81,0,this)">?</button>&#160;&#160;A</li><li id="Q_81_1"><button class="FuncButton" id="Q_81_1_Btn" onclick="CheckMCAnswer(81,1,this)">?</button>&#160;&#160;B</li><li id="Q_81_2"><button class="FuncButton" id="Q_81_2_Btn" onclick="CheckMCAnswer(81,2,this)">?</button>&#160;&#160;C</li><li id="Q_81_3"><button class="FuncButton" id="Q_81_3_Btn" onclick="CheckMCAnswer(81,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_82" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(83).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_82_0"><button class="FuncButton" id="Q_82_0_Btn" onclick="CheckMCAnswer(82,0,this)">?</button>&#160;&#160;A</li><li id="Q_82_1"><button class="FuncButton" id="Q_82_1_Btn" onclick="CheckMCAnswer(82,1,this)">?</button>&#160;&#160;B</li><li id="Q_82_2"><button class="FuncButton" id="Q_82_2_Btn" onclick="CheckMCAnswer(82,2,this)">?</button>&#160;&#160;C</li><li id="Q_82_3"><button class="FuncButton" id="Q_82_3_Btn" onclick="CheckMCAnswer(82,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_83" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(84).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_83_0"><button class="FuncButton" id="Q_83_0_Btn" onclick="CheckMCAnswer(83,0,this)">?</button>&#160;&#160;A</li><li id="Q_83_1"><button class="FuncButton" id="Q_83_1_Btn" onclick="CheckMCAnswer(83,1,this)">?</button>&#160;&#160;B</li><li id="Q_83_2"><button class="FuncButton" id="Q_83_2_Btn" onclick="CheckMCAnswer(83,2,this)">?</button>&#160;&#160;C</li><li id="Q_83_3"><button class="FuncButton" id="Q_83_3_Btn" onclick="CheckMCAnswer(83,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_84" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(85).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_84_0"><button class="FuncButton" id="Q_84_0_Btn" onclick="CheckMCAnswer(84,0,this)">?</button>&#160;&#160;A</li><li id="Q_84_1"><button class="FuncButton" id="Q_84_1_Btn" onclick="CheckMCAnswer(84,1,this)">?</button>&#160;&#160;B</li><li id="Q_84_2"><button class="FuncButton" id="Q_84_2_Btn" onclick="CheckMCAnswer(84,2,this)">?</button>&#160;&#160;C</li><li id="Q_84_3"><button class="FuncButton" id="Q_84_3_Btn" onclick="CheckMCAnswer(84,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_85" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(86).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_85_0"><button class="FuncButton" id="Q_85_0_Btn" onclick="CheckMCAnswer(85,0,this)">?</button>&#160;&#160;A</li><li id="Q_85_1"><button class="FuncButton" id="Q_85_1_Btn" onclick="CheckMCAnswer(85,1,this)">?</button>&#160;&#160;B</li><li id="Q_85_2"><button class="FuncButton" id="Q_85_2_Btn" onclick="CheckMCAnswer(85,2,this)">?</button>&#160;&#160;C</li><li id="Q_85_3"><button class="FuncButton" id="Q_85_3_Btn" onclick="CheckMCAnswer(85,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_86" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(87).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_86_0"><button class="FuncButton" id="Q_86_0_Btn" onclick="CheckMCAnswer(86,0,this)">?</button>&#160;&#160;A</li><li id="Q_86_1"><button class="FuncButton" id="Q_86_1_Btn" onclick="CheckMCAnswer(86,1,this)">?</button>&#160;&#160;B</li><li id="Q_86_2"><button class="FuncButton" id="Q_86_2_Btn" onclick="CheckMCAnswer(86,2,this)">?</button>&#160;&#160;C</li><li id="Q_86_3"><button class="FuncButton" id="Q_86_3_Btn" onclick="CheckMCAnswer(86,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_87" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(88).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_87_0"><button class="FuncButton" id="Q_87_0_Btn" onclick="CheckMCAnswer(87,0,this)">?</button>&#160;&#160;A</li><li id="Q_87_1"><button class="FuncButton" id="Q_87_1_Btn" onclick="CheckMCAnswer(87,1,this)">?</button>&#160;&#160;B</li><li id="Q_87_2"><button class="FuncButton" id="Q_87_2_Btn" onclick="CheckMCAnswer(87,2,this)">?</button>&#160;&#160;C</li><li id="Q_87_3"><button class="FuncButton" id="Q_87_3_Btn" onclick="CheckMCAnswer(87,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_88" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(89).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_88_0"><button class="FuncButton" id="Q_88_0_Btn" onclick="CheckMCAnswer(88,0,this)">?</button>&#160;&#160;A</li><li id="Q_88_1"><button class="FuncButton" id="Q_88_1_Btn" onclick="CheckMCAnswer(88,1,this)">?</button>&#160;&#160;B</li><li id="Q_88_2"><button class="FuncButton" id="Q_88_2_Btn" onclick="CheckMCAnswer(88,2,this)">?</button>&#160;&#160;C</li><li id="Q_88_3"><button class="FuncButton" id="Q_88_3_Btn" onclick="CheckMCAnswer(88,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_89" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(90).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_89_0"><button class="FuncButton" id="Q_89_0_Btn" onclick="CheckMCAnswer(89,0,this)">?</button>&#160;&#160;A</li><li id="Q_89_1"><button class="FuncButton" id="Q_89_1_Btn" onclick="CheckMCAnswer(89,1,this)">?</button>&#160;&#160;B</li><li id="Q_89_2"><button class="FuncButton" id="Q_89_2_Btn" onclick="CheckMCAnswer(89,2,this)">?</button>&#160;&#160;C</li><li id="Q_89_3"><button class="FuncButton" id="Q_89_3_Btn" onclick="CheckMCAnswer(89,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_90" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(91).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_90_0"><button class="FuncButton" id="Q_90_0_Btn" onclick="CheckMCAnswer(90,0,this)">?</button>&#160;&#160;A</li><li id="Q_90_1"><button class="FuncButton" id="Q_90_1_Btn" onclick="CheckMCAnswer(90,1,this)">?</button>&#160;&#160;B</li><li id="Q_90_2"><button class="FuncButton" id="Q_90_2_Btn" onclick="CheckMCAnswer(90,2,this)">?</button>&#160;&#160;C</li><li id="Q_90_3"><button class="FuncButton" id="Q_90_3_Btn" onclick="CheckMCAnswer(90,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_91" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(92).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_91_0"><button class="FuncButton" id="Q_91_0_Btn" onclick="CheckMCAnswer(91,0,this)">?</button>&#160;&#160;A</li><li id="Q_91_1"><button class="FuncButton" id="Q_91_1_Btn" onclick="CheckMCAnswer(91,1,this)">?</button>&#160;&#160;B</li><li id="Q_91_2"><button class="FuncButton" id="Q_91_2_Btn" onclick="CheckMCAnswer(91,2,this)">?</button>&#160;&#160;C</li><li id="Q_91_3"><button class="FuncButton" id="Q_91_3_Btn" onclick="CheckMCAnswer(91,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_92" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(93).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_92_0"><button class="FuncButton" id="Q_92_0_Btn" onclick="CheckMCAnswer(92,0,this)">?</button>&#160;&#160;A</li><li id="Q_92_1"><button class="FuncButton" id="Q_92_1_Btn" onclick="CheckMCAnswer(92,1,this)">?</button>&#160;&#160;B</li><li id="Q_92_2"><button class="FuncButton" id="Q_92_2_Btn" onclick="CheckMCAnswer(92,2,this)">?</button>&#160;&#160;C</li><li id="Q_92_3"><button class="FuncButton" id="Q_92_3_Btn" onclick="CheckMCAnswer(92,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_93" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(94).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_93_0"><button class="FuncButton" id="Q_93_0_Btn" onclick="CheckMCAnswer(93,0,this)">?</button>&#160;&#160;A</li><li id="Q_93_1"><button class="FuncButton" id="Q_93_1_Btn" onclick="CheckMCAnswer(93,1,this)">?</button>&#160;&#160;B</li><li id="Q_93_2"><button class="FuncButton" id="Q_93_2_Btn" onclick="CheckMCAnswer(93,2,this)">?</button>&#160;&#160;C</li><li id="Q_93_3"><button class="FuncButton" id="Q_93_3_Btn" onclick="CheckMCAnswer(93,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_94" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(95).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_94_0"><button class="FuncButton" id="Q_94_0_Btn" onclick="CheckMCAnswer(94,0,this)">?</button>&#160;&#160;A</li><li id="Q_94_1"><button class="FuncButton" id="Q_94_1_Btn" onclick="CheckMCAnswer(94,1,this)">?</button>&#160;&#160;B</li><li id="Q_94_2"><button class="FuncButton" id="Q_94_2_Btn" onclick="CheckMCAnswer(94,2,this)">?</button>&#160;&#160;C</li><li id="Q_94_3"><button class="FuncButton" id="Q_94_3_Btn" onclick="CheckMCAnswer(94,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_95" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(96).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_95_0"><button class="FuncButton" id="Q_95_0_Btn" onclick="CheckMCAnswer(95,0,this)">?</button>&#160;&#160;A</li><li id="Q_95_1"><button class="FuncButton" id="Q_95_1_Btn" onclick="CheckMCAnswer(95,1,this)">?</button>&#160;&#160;B</li><li id="Q_95_2"><button class="FuncButton" id="Q_95_2_Btn" onclick="CheckMCAnswer(95,2,this)">?</button>&#160;&#160;C</li><li id="Q_95_3"><button class="FuncButton" id="Q_95_3_Btn" onclick="CheckMCAnswer(95,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_96" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(97).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_96_0"><button class="FuncButton" id="Q_96_0_Btn" onclick="CheckMCAnswer(96,0,this)">?</button>&#160;&#160;A</li><li id="Q_96_1"><button class="FuncButton" id="Q_96_1_Btn" onclick="CheckMCAnswer(96,1,this)">?</button>&#160;&#160;B</li><li id="Q_96_2"><button class="FuncButton" id="Q_96_2_Btn" onclick="CheckMCAnswer(96,2,this)">?</button>&#160;&#160;C</li><li id="Q_96_3"><button class="FuncButton" id="Q_96_3_Btn" onclick="CheckMCAnswer(96,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_97" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(98).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_97_0"><button class="FuncButton" id="Q_97_0_Btn" onclick="CheckMCAnswer(97,0,this)">?</button>&#160;&#160;A</li><li id="Q_97_1"><button class="FuncButton" id="Q_97_1_Btn" onclick="CheckMCAnswer(97,1,this)">?</button>&#160;&#160;B</li><li id="Q_97_2"><button class="FuncButton" id="Q_97_2_Btn" onclick="CheckMCAnswer(97,2,this)">?</button>&#160;&#160;C</li><li id="Q_97_3"><button class="FuncButton" id="Q_97_3_Btn" onclick="CheckMCAnswer(97,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_98" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(99).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_98_0"><button class="FuncButton" id="Q_98_0_Btn" onclick="CheckMCAnswer(98,0,this)">?</button>&#160;&#160;A</li><li id="Q_98_1"><button class="FuncButton" id="Q_98_1_Btn" onclick="CheckMCAnswer(98,1,this)">?</button>&#160;&#160;B</li><li id="Q_98_2"><button class="FuncButton" id="Q_98_2_Btn" onclick="CheckMCAnswer(98,2,this)">?</button>&#160;&#160;C</li><li id="Q_98_3"><button class="FuncButton" id="Q_98_3_Btn" onclick="CheckMCAnswer(98,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_99" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(100).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_99_0"><button class="FuncButton" id="Q_99_0_Btn" onclick="CheckMCAnswer(99,0,this)">?</button>&#160;&#160;A</li><li id="Q_99_1"><button class="FuncButton" id="Q_99_1_Btn" onclick="CheckMCAnswer(99,1,this)">?</button>&#160;&#160;B</li><li id="Q_99_2"><button class="FuncButton" id="Q_99_2_Btn" onclick="CheckMCAnswer(99,2,this)">?</button>&#160;&#160;C</li><li id="Q_99_3"><button class="FuncButton" id="Q_99_3_Btn" onclick="CheckMCAnswer(99,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_100" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(101).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_100_0"><button class="FuncButton" id="Q_100_0_Btn" onclick="CheckMCAnswer(100,0,this)">?</button>&#160;&#160;A</li><li id="Q_100_1"><button class="FuncButton" id="Q_100_1_Btn" onclick="CheckMCAnswer(100,1,this)">?</button>&#160;&#160;B</li><li id="Q_100_2"><button class="FuncButton" id="Q_100_2_Btn" onclick="CheckMCAnswer(100,2,this)">?</button>&#160;&#160;C</li><li id="Q_100_3"><button class="FuncButton" id="Q_100_3_Btn" onclick="CheckMCAnswer(100,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_101" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(102).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_101_0"><button class="FuncButton" id="Q_101_0_Btn" onclick="CheckMCAnswer(101,0,this)">?</button>&#160;&#160;A</li><li id="Q_101_1"><button class="FuncButton" id="Q_101_1_Btn" onclick="CheckMCAnswer(101,1,this)">?</button>&#160;&#160;B</li><li id="Q_101_2"><button class="FuncButton" id="Q_101_2_Btn" onclick="CheckMCAnswer(101,2,this)">?</button>&#160;&#160;C</li><li id="Q_101_3"><button class="FuncButton" id="Q_101_3_Btn" onclick="CheckMCAnswer(101,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_102" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(103).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_102_0"><button class="FuncButton" id="Q_102_0_Btn" onclick="CheckMCAnswer(102,0,this)">?</button>&#160;&#160;A</li><li id="Q_102_1"><button class="FuncButton" id="Q_102_1_Btn" onclick="CheckMCAnswer(102,1,this)">?</button>&#160;&#160;B</li><li id="Q_102_2"><button class="FuncButton" id="Q_102_2_Btn" onclick="CheckMCAnswer(102,2,this)">?</button>&#160;&#160;C</li><li id="Q_102_3"><button class="FuncButton" id="Q_102_3_Btn" onclick="CheckMCAnswer(102,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_103" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(104).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_103_0"><button class="FuncButton" id="Q_103_0_Btn" onclick="CheckMCAnswer(103,0,this)">?</button>&#160;&#160;A</li><li id="Q_103_1"><button class="FuncButton" id="Q_103_1_Btn" onclick="CheckMCAnswer(103,1,this)">?</button>&#160;&#160;B</li><li id="Q_103_2"><button class="FuncButton" id="Q_103_2_Btn" onclick="CheckMCAnswer(103,2,this)">?</button>&#160;&#160;C</li><li id="Q_103_3"><button class="FuncButton" id="Q_103_3_Btn" onclick="CheckMCAnswer(103,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_104" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(105).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_104_0"><button class="FuncButton" id="Q_104_0_Btn" onclick="CheckMCAnswer(104,0,this)">?</button>&#160;&#160;A</li><li id="Q_104_1"><button class="FuncButton" id="Q_104_1_Btn" onclick="CheckMCAnswer(104,1,this)">?</button>&#160;&#160;B</li><li id="Q_104_2"><button class="FuncButton" id="Q_104_2_Btn" onclick="CheckMCAnswer(104,2,this)">?</button>&#160;&#160;C</li><li id="Q_104_3"><button class="FuncButton" id="Q_104_3_Btn" onclick="CheckMCAnswer(104,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_105" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(106).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_105_0"><button class="FuncButton" id="Q_105_0_Btn" onclick="CheckMCAnswer(105,0,this)">?</button>&#160;&#160;A</li><li id="Q_105_1"><button class="FuncButton" id="Q_105_1_Btn" onclick="CheckMCAnswer(105,1,this)">?</button>&#160;&#160;B</li><li id="Q_105_2"><button class="FuncButton" id="Q_105_2_Btn" onclick="CheckMCAnswer(105,2,this)">?</button>&#160;&#160;C</li><li id="Q_105_3"><button class="FuncButton" id="Q_105_3_Btn" onclick="CheckMCAnswer(105,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_106" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(107).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_106_0"><button class="FuncButton" id="Q_106_0_Btn" onclick="CheckMCAnswer(106,0,this)">?</button>&#160;&#160;A</li><li id="Q_106_1"><button class="FuncButton" id="Q_106_1_Btn" onclick="CheckMCAnswer(106,1,this)">?</button>&#160;&#160;B</li><li id="Q_106_2"><button class="FuncButton" id="Q_106_2_Btn" onclick="CheckMCAnswer(106,2,this)">?</button>&#160;&#160;C</li><li id="Q_106_3"><button class="FuncButton" id="Q_106_3_Btn" onclick="CheckMCAnswer(106,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_107" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(108).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_107_0"><button class="FuncButton" id="Q_107_0_Btn" onclick="CheckMCAnswer(107,0,this)">?</button>&#160;&#160;A</li><li id="Q_107_1"><button class="FuncButton" id="Q_107_1_Btn" onclick="CheckMCAnswer(107,1,this)">?</button>&#160;&#160;B</li><li id="Q_107_2"><button class="FuncButton" id="Q_107_2_Btn" onclick="CheckMCAnswer(107,2,this)">?</button>&#160;&#160;C</li><li id="Q_107_3"><button class="FuncButton" id="Q_107_3_Btn" onclick="CheckMCAnswer(107,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_108" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(109).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_108_0"><button class="FuncButton" id="Q_108_0_Btn" onclick="CheckMCAnswer(108,0,this)">?</button>&#160;&#160;A</li><li id="Q_108_1"><button class="FuncButton" id="Q_108_1_Btn" onclick="CheckMCAnswer(108,1,this)">?</button>&#160;&#160;B</li><li id="Q_108_2"><button class="FuncButton" id="Q_108_2_Btn" onclick="CheckMCAnswer(108,2,this)">?</button>&#160;&#160;C</li><li id="Q_108_3"><button class="FuncButton" id="Q_108_3_Btn" onclick="CheckMCAnswer(108,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_109" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(110).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_109_0"><button class="FuncButton" id="Q_109_0_Btn" onclick="CheckMCAnswer(109,0,this)">?</button>&#160;&#160;A</li><li id="Q_109_1"><button class="FuncButton" id="Q_109_1_Btn" onclick="CheckMCAnswer(109,1,this)">?</button>&#160;&#160;B</li><li id="Q_109_2"><button class="FuncButton" id="Q_109_2_Btn" onclick="CheckMCAnswer(109,2,this)">?</button>&#160;&#160;C</li><li id="Q_109_3"><button class="FuncButton" id="Q_109_3_Btn" onclick="CheckMCAnswer(109,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_110" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(111).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_110_0"><button class="FuncButton" id="Q_110_0_Btn" onclick="CheckMCAnswer(110,0,this)">?</button>&#160;&#160;A</li><li id="Q_110_1"><button class="FuncButton" id="Q_110_1_Btn" onclick="CheckMCAnswer(110,1,this)">?</button>&#160;&#160;B</li><li id="Q_110_2"><button class="FuncButton" id="Q_110_2_Btn" onclick="CheckMCAnswer(110,2,this)">?</button>&#160;&#160;C</li><li id="Q_110_3"><button class="FuncButton" id="Q_110_3_Btn" onclick="CheckMCAnswer(110,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_111" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(112).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_111_0"><button class="FuncButton" id="Q_111_0_Btn" onclick="CheckMCAnswer(111,0,this)">?</button>&#160;&#160;A</li><li id="Q_111_1"><button class="FuncButton" id="Q_111_1_Btn" onclick="CheckMCAnswer(111,1,this)">?</button>&#160;&#160;B</li><li id="Q_111_2"><button class="FuncButton" id="Q_111_2_Btn" onclick="CheckMCAnswer(111,2,this)">?</button>&#160;&#160;C</li><li id="Q_111_3"><button class="FuncButton" id="Q_111_3_Btn" onclick="CheckMCAnswer(111,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_112" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(113).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_112_0"><button class="FuncButton" id="Q_112_0_Btn" onclick="CheckMCAnswer(112,0,this)">?</button>&#160;&#160;A</li><li id="Q_112_1"><button class="FuncButton" id="Q_112_1_Btn" onclick="CheckMCAnswer(112,1,this)">?</button>&#160;&#160;B</li><li id="Q_112_2"><button class="FuncButton" id="Q_112_2_Btn" onclick="CheckMCAnswer(112,2,this)">?</button>&#160;&#160;C</li><li id="Q_112_3"><button class="FuncButton" id="Q_112_3_Btn" onclick="CheckMCAnswer(112,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_113" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(114).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_113_0"><button class="FuncButton" id="Q_113_0_Btn" onclick="CheckMCAnswer(113,0,this)">?</button>&#160;&#160;A</li><li id="Q_113_1"><button class="FuncButton" id="Q_113_1_Btn" onclick="CheckMCAnswer(113,1,this)">?</button>&#160;&#160;B</li><li id="Q_113_2"><button class="FuncButton" id="Q_113_2_Btn" onclick="CheckMCAnswer(113,2,this)">?</button>&#160;&#160;C</li><li id="Q_113_3"><button class="FuncButton" id="Q_113_3_Btn" onclick="CheckMCAnswer(113,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_114" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(115).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_114_0"><button class="FuncButton" id="Q_114_0_Btn" onclick="CheckMCAnswer(114,0,this)">?</button>&#160;&#160;A</li><li id="Q_114_1"><button class="FuncButton" id="Q_114_1_Btn" onclick="CheckMCAnswer(114,1,this)">?</button>&#160;&#160;B</li><li id="Q_114_2"><button class="FuncButton" id="Q_114_2_Btn" onclick="CheckMCAnswer(114,2,this)">?</button>&#160;&#160;C</li><li id="Q_114_3"><button class="FuncButton" id="Q_114_3_Btn" onclick="CheckMCAnswer(114,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_115" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(116).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_115_0"><button class="FuncButton" id="Q_115_0_Btn" onclick="CheckMCAnswer(115,0,this)">?</button>&#160;&#160;A</li><li id="Q_115_1"><button class="FuncButton" id="Q_115_1_Btn" onclick="CheckMCAnswer(115,1,this)">?</button>&#160;&#160;B</li><li id="Q_115_2"><button class="FuncButton" id="Q_115_2_Btn" onclick="CheckMCAnswer(115,2,this)">?</button>&#160;&#160;C</li><li id="Q_115_3"><button class="FuncButton" id="Q_115_3_Btn" onclick="CheckMCAnswer(115,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_116" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(117).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_116_0"><button class="FuncButton" id="Q_116_0_Btn" onclick="CheckMCAnswer(116,0,this)">?</button>&#160;&#160;A</li><li id="Q_116_1"><button class="FuncButton" id="Q_116_1_Btn" onclick="CheckMCAnswer(116,1,this)">?</button>&#160;&#160;B</li><li id="Q_116_2"><button class="FuncButton" id="Q_116_2_Btn" onclick="CheckMCAnswer(116,2,this)">?</button>&#160;&#160;C</li><li id="Q_116_3"><button class="FuncButton" id="Q_116_3_Btn" onclick="CheckMCAnswer(116,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_117" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(118).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_117_0"><button class="FuncButton" id="Q_117_0_Btn" onclick="CheckMCAnswer(117,0,this)">?</button>&#160;&#160;A</li><li id="Q_117_1"><button class="FuncButton" id="Q_117_1_Btn" onclick="CheckMCAnswer(117,1,this)">?</button>&#160;&#160;B</li><li id="Q_117_2"><button class="FuncButton" id="Q_117_2_Btn" onclick="CheckMCAnswer(117,2,this)">?</button>&#160;&#160;C</li><li id="Q_117_3"><button class="FuncButton" id="Q_117_3_Btn" onclick="CheckMCAnswer(117,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_118" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(119).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_118_0"><button class="FuncButton" id="Q_118_0_Btn" onclick="CheckMCAnswer(118,0,this)">?</button>&#160;&#160;A</li><li id="Q_118_1"><button class="FuncButton" id="Q_118_1_Btn" onclick="CheckMCAnswer(118,1,this)">?</button>&#160;&#160;B</li><li id="Q_118_2"><button class="FuncButton" id="Q_118_2_Btn" onclick="CheckMCAnswer(118,2,this)">?</button>&#160;&#160;C</li><li id="Q_118_3"><button class="FuncButton" id="Q_118_3_Btn" onclick="CheckMCAnswer(118,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_119" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(120).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_119_0"><button class="FuncButton" id="Q_119_0_Btn" onclick="CheckMCAnswer(119,0,this)">?</button>&#160;&#160;A</li><li id="Q_119_1"><button class="FuncButton" id="Q_119_1_Btn" onclick="CheckMCAnswer(119,1,this)">?</button>&#160;&#160;B</li><li id="Q_119_2"><button class="FuncButton" id="Q_119_2_Btn" onclick="CheckMCAnswer(119,2,this)">?</button>&#160;&#160;C</li><li id="Q_119_3"><button class="FuncButton" id="Q_119_3_Btn" onclick="CheckMCAnswer(119,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_120" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(121).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_120_0"><button class="FuncButton" id="Q_120_0_Btn" onclick="CheckMCAnswer(120,0,this)">?</button>&#160;&#160;A</li><li id="Q_120_1"><button class="FuncButton" id="Q_120_1_Btn" onclick="CheckMCAnswer(120,1,this)">?</button>&#160;&#160;B</li><li id="Q_120_2"><button class="FuncButton" id="Q_120_2_Btn" onclick="CheckMCAnswer(120,2,this)">?</button>&#160;&#160;C</li><li id="Q_120_3"><button class="FuncButton" id="Q_120_3_Btn" onclick="CheckMCAnswer(120,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_121" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(122).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_121_0"><button class="FuncButton" id="Q_121_0_Btn" onclick="CheckMCAnswer(121,0,this)">?</button>&#160;&#160;A</li><li id="Q_121_1"><button class="FuncButton" id="Q_121_1_Btn" onclick="CheckMCAnswer(121,1,this)">?</button>&#160;&#160;B</li><li id="Q_121_2"><button class="FuncButton" id="Q_121_2_Btn" onclick="CheckMCAnswer(121,2,this)">?</button>&#160;&#160;C</li><li id="Q_121_3"><button class="FuncButton" id="Q_121_3_Btn" onclick="CheckMCAnswer(121,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_122" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(123).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_122_0"><button class="FuncButton" id="Q_122_0_Btn" onclick="CheckMCAnswer(122,0,this)">?</button>&#160;&#160;A</li><li id="Q_122_1"><button class="FuncButton" id="Q_122_1_Btn" onclick="CheckMCAnswer(122,1,this)">?</button>&#160;&#160;B</li><li id="Q_122_2"><button class="FuncButton" id="Q_122_2_Btn" onclick="CheckMCAnswer(122,2,this)">?</button>&#160;&#160;C</li><li id="Q_122_3"><button class="FuncButton" id="Q_122_3_Btn" onclick="CheckMCAnswer(122,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_123" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(124).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_123_0"><button class="FuncButton" id="Q_123_0_Btn" onclick="CheckMCAnswer(123,0,this)">?</button>&#160;&#160;A</li><li id="Q_123_1"><button class="FuncButton" id="Q_123_1_Btn" onclick="CheckMCAnswer(123,1,this)">?</button>&#160;&#160;B</li><li id="Q_123_2"><button class="FuncButton" id="Q_123_2_Btn" onclick="CheckMCAnswer(123,2,this)">?</button>&#160;&#160;C</li><li id="Q_123_3"><button class="FuncButton" id="Q_123_3_Btn" onclick="CheckMCAnswer(123,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_124" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(125).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_124_0"><button class="FuncButton" id="Q_124_0_Btn" onclick="CheckMCAnswer(124,0,this)">?</button>&#160;&#160;A</li><li id="Q_124_1"><button class="FuncButton" id="Q_124_1_Btn" onclick="CheckMCAnswer(124,1,this)">?</button>&#160;&#160;B</li><li id="Q_124_2"><button class="FuncButton" id="Q_124_2_Btn" onclick="CheckMCAnswer(124,2,this)">?</button>&#160;&#160;C</li><li id="Q_124_3"><button class="FuncButton" id="Q_124_3_Btn" onclick="CheckMCAnswer(124,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_125" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(126).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_125_0"><button class="FuncButton" id="Q_125_0_Btn" onclick="CheckMCAnswer(125,0,this)">?</button>&#160;&#160;A</li><li id="Q_125_1"><button class="FuncButton" id="Q_125_1_Btn" onclick="CheckMCAnswer(125,1,this)">?</button>&#160;&#160;B</li><li id="Q_125_2"><button class="FuncButton" id="Q_125_2_Btn" onclick="CheckMCAnswer(125,2,this)">?</button>&#160;&#160;C</li><li id="Q_125_3"><button class="FuncButton" id="Q_125_3_Btn" onclick="CheckMCAnswer(125,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_126" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(127).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_126_0"><button class="FuncButton" id="Q_126_0_Btn" onclick="CheckMCAnswer(126,0,this)">?</button>&#160;&#160;A</li><li id="Q_126_1"><button class="FuncButton" id="Q_126_1_Btn" onclick="CheckMCAnswer(126,1,this)">?</button>&#160;&#160;B</li><li id="Q_126_2"><button class="FuncButton" id="Q_126_2_Btn" onclick="CheckMCAnswer(126,2,this)">?</button>&#160;&#160;C</li><li id="Q_126_3"><button class="FuncButton" id="Q_126_3_Btn" onclick="CheckMCAnswer(126,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_127" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(128).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_127_0"><button class="FuncButton" id="Q_127_0_Btn" onclick="CheckMCAnswer(127,0,this)">?</button>&#160;&#160;A</li><li id="Q_127_1"><button class="FuncButton" id="Q_127_1_Btn" onclick="CheckMCAnswer(127,1,this)">?</button>&#160;&#160;B</li><li id="Q_127_2"><button class="FuncButton" id="Q_127_2_Btn" onclick="CheckMCAnswer(127,2,this)">?</button>&#160;&#160;C</li><li id="Q_127_3"><button class="FuncButton" id="Q_127_3_Btn" onclick="CheckMCAnswer(127,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_128" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(129).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_128_0"><button class="FuncButton" id="Q_128_0_Btn" onclick="CheckMCAnswer(128,0,this)">?</button>&#160;&#160;A</li><li id="Q_128_1"><button class="FuncButton" id="Q_128_1_Btn" onclick="CheckMCAnswer(128,1,this)">?</button>&#160;&#160;B</li><li id="Q_128_2"><button class="FuncButton" id="Q_128_2_Btn" onclick="CheckMCAnswer(128,2,this)">?</button>&#160;&#160;C</li><li id="Q_128_3"><button class="FuncButton" id="Q_128_3_Btn" onclick="CheckMCAnswer(128,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_129" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(130).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_129_0"><button class="FuncButton" id="Q_129_0_Btn" onclick="CheckMCAnswer(129,0,this)">?</button>&#160;&#160;A</li><li id="Q_129_1"><button class="FuncButton" id="Q_129_1_Btn" onclick="CheckMCAnswer(129,1,this)">?</button>&#160;&#160;B</li><li id="Q_129_2"><button class="FuncButton" id="Q_129_2_Btn" onclick="CheckMCAnswer(129,2,this)">?</button>&#160;&#160;C</li><li id="Q_129_3"><button class="FuncButton" id="Q_129_3_Btn" onclick="CheckMCAnswer(129,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_130" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(131).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_130_0"><button class="FuncButton" id="Q_130_0_Btn" onclick="CheckMCAnswer(130,0,this)">?</button>&#160;&#160;A</li><li id="Q_130_1"><button class="FuncButton" id="Q_130_1_Btn" onclick="CheckMCAnswer(130,1,this)">?</button>&#160;&#160;B</li><li id="Q_130_2"><button class="FuncButton" id="Q_130_2_Btn" onclick="CheckMCAnswer(130,2,this)">?</button>&#160;&#160;C</li><li id="Q_130_3"><button class="FuncButton" id="Q_130_3_Btn" onclick="CheckMCAnswer(130,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_131" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(132).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_131_0"><button class="FuncButton" id="Q_131_0_Btn" onclick="CheckMCAnswer(131,0,this)">?</button>&#160;&#160;A</li><li id="Q_131_1"><button class="FuncButton" id="Q_131_1_Btn" onclick="CheckMCAnswer(131,1,this)">?</button>&#160;&#160;B</li><li id="Q_131_2"><button class="FuncButton" id="Q_131_2_Btn" onclick="CheckMCAnswer(131,2,this)">?</button>&#160;&#160;C</li><li id="Q_131_3"><button class="FuncButton" id="Q_131_3_Btn" onclick="CheckMCAnswer(131,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_132" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(133).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_132_0"><button class="FuncButton" id="Q_132_0_Btn" onclick="CheckMCAnswer(132,0,this)">?</button>&#160;&#160;A</li><li id="Q_132_1"><button class="FuncButton" id="Q_132_1_Btn" onclick="CheckMCAnswer(132,1,this)">?</button>&#160;&#160;B</li><li id="Q_132_2"><button class="FuncButton" id="Q_132_2_Btn" onclick="CheckMCAnswer(132,2,this)">?</button>&#160;&#160;C</li><li id="Q_132_3"><button class="FuncButton" id="Q_132_3_Btn" onclick="CheckMCAnswer(132,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_133" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(134).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_133_0"><button class="FuncButton" id="Q_133_0_Btn" onclick="CheckMCAnswer(133,0,this)">?</button>&#160;&#160;A</li><li id="Q_133_1"><button class="FuncButton" id="Q_133_1_Btn" onclick="CheckMCAnswer(133,1,this)">?</button>&#160;&#160;B</li><li id="Q_133_2"><button class="FuncButton" id="Q_133_2_Btn" onclick="CheckMCAnswer(133,2,this)">?</button>&#160;&#160;C</li><li id="Q_133_3"><button class="FuncButton" id="Q_133_3_Btn" onclick="CheckMCAnswer(133,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_134" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(135).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_134_0"><button class="FuncButton" id="Q_134_0_Btn" onclick="CheckMCAnswer(134,0,this)">?</button>&#160;&#160;A</li><li id="Q_134_1"><button class="FuncButton" id="Q_134_1_Btn" onclick="CheckMCAnswer(134,1,this)">?</button>&#160;&#160;B</li><li id="Q_134_2"><button class="FuncButton" id="Q_134_2_Btn" onclick="CheckMCAnswer(134,2,this)">?</button>&#160;&#160;C</li><li id="Q_134_3"><button class="FuncButton" id="Q_134_3_Btn" onclick="CheckMCAnswer(134,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_135" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(136).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_135_0"><button class="FuncButton" id="Q_135_0_Btn" onclick="CheckMCAnswer(135,0,this)">?</button>&#160;&#160;A</li><li id="Q_135_1"><button class="FuncButton" id="Q_135_1_Btn" onclick="CheckMCAnswer(135,1,this)">?</button>&#160;&#160;B</li><li id="Q_135_2"><button class="FuncButton" id="Q_135_2_Btn" onclick="CheckMCAnswer(135,2,this)">?</button>&#160;&#160;C</li><li id="Q_135_3"><button class="FuncButton" id="Q_135_3_Btn" onclick="CheckMCAnswer(135,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_136" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(137).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_136_0"><button class="FuncButton" id="Q_136_0_Btn" onclick="CheckMCAnswer(136,0,this)">?</button>&#160;&#160;A</li><li id="Q_136_1"><button class="FuncButton" id="Q_136_1_Btn" onclick="CheckMCAnswer(136,1,this)">?</button>&#160;&#160;B</li><li id="Q_136_2"><button class="FuncButton" id="Q_136_2_Btn" onclick="CheckMCAnswer(136,2,this)">?</button>&#160;&#160;C</li><li id="Q_136_3"><button class="FuncButton" id="Q_136_3_Btn" onclick="CheckMCAnswer(136,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_137" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(138).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_137_0"><button class="FuncButton" id="Q_137_0_Btn" onclick="CheckMCAnswer(137,0,this)">?</button>&#160;&#160;A</li><li id="Q_137_1"><button class="FuncButton" id="Q_137_1_Btn" onclick="CheckMCAnswer(137,1,this)">?</button>&#160;&#160;B</li><li id="Q_137_2"><button class="FuncButton" id="Q_137_2_Btn" onclick="CheckMCAnswer(137,2,this)">?</button>&#160;&#160;C</li><li id="Q_137_3"><button class="FuncButton" id="Q_137_3_Btn" onclick="CheckMCAnswer(137,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_138" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(139).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_138_0"><button class="FuncButton" id="Q_138_0_Btn" onclick="CheckMCAnswer(138,0,this)">?</button>&#160;&#160;A</li><li id="Q_138_1"><button class="FuncButton" id="Q_138_1_Btn" onclick="CheckMCAnswer(138,1,this)">?</button>&#160;&#160;B</li><li id="Q_138_2"><button class="FuncButton" id="Q_138_2_Btn" onclick="CheckMCAnswer(138,2,this)">?</button>&#160;&#160;C</li><li id="Q_138_3"><button class="FuncButton" id="Q_138_3_Btn" onclick="CheckMCAnswer(138,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_139" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(140).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_139_0"><button class="FuncButton" id="Q_139_0_Btn" onclick="CheckMCAnswer(139,0,this)">?</button>&#160;&#160;A</li><li id="Q_139_1"><button class="FuncButton" id="Q_139_1_Btn" onclick="CheckMCAnswer(139,1,this)">?</button>&#160;&#160;B</li><li id="Q_139_2"><button class="FuncButton" id="Q_139_2_Btn" onclick="CheckMCAnswer(139,2,this)">?</button>&#160;&#160;C</li><li id="Q_139_3"><button class="FuncButton" id="Q_139_3_Btn" onclick="CheckMCAnswer(139,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_140" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(141).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_140_0"><button class="FuncButton" id="Q_140_0_Btn" onclick="CheckMCAnswer(140,0,this)">?</button>&#160;&#160;A</li><li id="Q_140_1"><button class="FuncButton" id="Q_140_1_Btn" onclick="CheckMCAnswer(140,1,this)">?</button>&#160;&#160;B</li><li id="Q_140_2"><button class="FuncButton" id="Q_140_2_Btn" onclick="CheckMCAnswer(140,2,this)">?</button>&#160;&#160;C</li><li id="Q_140_3"><button class="FuncButton" id="Q_140_3_Btn" onclick="CheckMCAnswer(140,3,this)">?</button>&#160;&#160;D</li></ol></li>
+<li class="QuizQuestion" id="Q_141" style="display: none;"><div class="QuestionText"><img src="https://itiquiz.netlify.app/NEW%20EDITION/UNIT%201/3/EA%20(142).jpg" alt="???" title="???" width="???" height="???"/><br /></div><ol class="MCAnswers"><li id="Q_141_0"><button class="FuncButton" id="Q_141_0_Btn" onclick="CheckMCAnswer(141,0,this)">?</button>&#160;&#160;A</li><li id="Q_141_1"><button class="FuncButton" id="Q_141_1_Btn" onclick="CheckMCAnswer(141,1,this)">?</button>&#160;&#160;B</li><li id="Q_141_2"><button class="FuncButton" id="Q_141_2_Btn" onclick="CheckMCAnswer(141,2,this)">?</button>&#160;&#160;C</li><li id="Q_141_3"><button class="FuncButton" id="Q_141_3_Btn" onclick="CheckMCAnswer(141,3,this)">?</button>&#160;&#160;D</li></ol></li></ol>
+
+
+
+</div>
+
+</div>
+
+<div class="Feedback" id="FeedbackDiv">
+<div class="FeedbackText" id="FeedbackContent"></div>
+<button id="FeedbackOKButton" class="FuncButton" onclick="HideFeedback(); return false;">&#160;OK&#160;</button>
+</div>
+
+<!-- BeginBottomNavButtons -->
+
+
+
+<!-- EndBottomNavButtons -->
+
+<!-- BeginSubmissionForm -->
+
+<!-- EndSubmissionForm -->
+
+</body>
+
+</html>
