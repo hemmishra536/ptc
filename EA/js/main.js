@@ -6,17 +6,12 @@ var i = 0;
 
 var input = document.getElementById("myInput");
 input.addEventListener("keypress", function prev() {
-  if (event.key === "ArrowLeft") {
+  if (event.key === "Enter") {
     event.preventDefault();
     document.getElementById("myBtn").click();
   }
 });
-input.addEventListener("keypress", function next() {
-  if (event.key === "ArrowRight") {
-    event.preventDefault();
-    document.getElementById("myBtn").click();
-  }
-});
+
 function prev(){
 	if(i <= 0) i = images.length;	
 	i--;
