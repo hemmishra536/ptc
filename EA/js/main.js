@@ -6,7 +6,7 @@ var i = 0;
 
 var input = document.getElementById("myInput");
 input.addEventListener("keypress", function prev() {
-  if (event.key === "ArrowLeft") {
+  if (event.key === "37") {
     event.preventDefault();
     document.getElementById("myBtn").click();
   }
