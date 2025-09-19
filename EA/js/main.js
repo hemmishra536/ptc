@@ -9,11 +9,7 @@ function prev(){
 	i--;
 	return setImg();			 
 }
-function &larr{
-	if(i <= 0) i = images.length;	
-	i--;
-	return setImg();			 
-}
+
 
 
 function next(){
