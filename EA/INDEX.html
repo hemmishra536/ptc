@@ -29,7 +29,18 @@
 			
 			
 		</div>
-
+        <script>
+      
+      	$(document).on('keyup', function(event) {
+		if (event.which === 37) { 
+          	$('#key-slider  .w-slider-arrow-left').trigger('tap');
+        	} 
+      	else if (event.which === 39) { 
+          	$('#key-slider .w-slider-arrow-right').trigger('tap');
+        	} 
+        });
+      
+  </script>
 		<script src="js/main.js"></script>
 
 	</body>
