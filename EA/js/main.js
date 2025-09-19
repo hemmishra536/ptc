@@ -1,16 +1,5 @@
 // 'js/mian.js'
-<script>
-      
-      	$(document).on('keyup', function(event) {
-		if (event.which === 37) { 
-          	$(' .w-slider-arrow-left').trigger('tap');
-        	} 
-      	else if (event.which === 39) { 
-          	$('.w-slider-arrow-right').trigger('tap');
-        	} 
-        });
-      
-  </script>
+
 var slider_img = document.querySelector('.slider-img');
 var images = ['EA (1).jpg','EA (2).jpg','EA (3).jpg','EA (4).jpg','EA (5).jpg','EA (6).jpg','EA (7).jpg','EA (8).jpg','EA (9).jpg','EA (10).jpg','EA (11).jpg','EA (12).jpg','EA (13).jpg','EA (14).jpg','EA (15).jpg','EA (16).jpg','EA (17).jpg','EA (18).jpg','EA (19).jpg','EA (20).jpg','EA (21).jpg','EA (22).jpg','EA (23).jpg','EA (24).jpg','EA (25).jpg','EA (26).jpg','EA (27).jpg','EA (28).jpg','EA (29).jpg','EA (30).jpg','EA (31).jpg','EA (32).jpg','EA (33).jpg','EA (34).jpg','EA (35).jpg','EA (36).jpg','EA (37).jpg','EA (38).jpg','EA (39).jpg','EA (40).jpg','EA (41).jpg','EA (42).jpg','EA (43).jpg','EA (44).jpg','EA (45).jpg','EA (46).jpg','EA (47).jpg','EA (48).jpg','EA (49).jpg','EA (50).jpg','EA (51).jpg','EA (52).jpg','EA (53).jpg','EA (54).jpg','EA (55).jpg','EA (56).jpg','EA (57).jpg','EA (58).jpg','EA (59).jpg','EA (60).jpg','EA (61).jpg','EA (62).jpg','EA (63).jpg','EA (64).jpg','EA (65).jpg','EA (66).jpg','EA (67).jpg','EA (68).jpg','EA (69).jpg','EA (70).jpg','EA (71).jpg','EA (72).jpg','EA (73).jpg','EA (74).jpg','EA (75).jpg','EA (76).jpg','EA (77).jpg','EA (78).jpg','EA (79).jpg','EA (80).jpg','EA (81).jpg','EA (82).jpg','EA (83).jpg','EA (84).jpg','EA (85).jpg','EA (86).jpg','EA (87).jpg','EA (88).jpg','EA (89).jpg','EA (90).jpg','EA (91).jpg','EA (92).jpg','EA (93).jpg','EA (94).jpg','EA (95).jpg','EA (96).jpg','EA (97).jpg','EA (98).jpg','EA (99).jpg','EA (100).jpg','EA (101).jpg','EA (102).jpg','EA (103).jpg','EA (104).jpg','EA (105).jpg','EA (106).jpg','EA (107).jpg','EA (108).jpg','EA (109).jpg','EA (110).jpg','EA (111).jpg','EA (112).jpg','EA (113).jpg','EA (114).jpg','EA (115).jpg','EA (116).jpg','EA (117).jpg','EA (118).jpg','EA (119).jpg','EA (120).jpg','EA (121).jpg','EA (122).jpg','EA (123).jpg','EA (124).jpg','EA (125).jpg','EA (126).jpg','EA (127).jpg','EA (128).jpg','EA (129).jpg','EA (130).jpg','EA (131).jpg','EA (132).jpg','EA (133).jpg','EA (134).jpg','EA (135).jpg','EA (136).jpg','EA (137).jpg','EA (138).jpg','EA (139).jpg','EA (140).jpg','EA (141).jpg','EA (142).jpg'];
 var i = 0;
