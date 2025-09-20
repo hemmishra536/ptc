@@ -1,0 +1,25 @@
+{
+  "name": "slider",
+  "version": "1.0.0",
+  "description": "Image slider made with <strong>JavaScript</strong>. There is an interval of 2 seconds between slides, but you can also change slides with left and right arrow keys.\r The moment you do it, it also clears the interval and counts from the beginning.",
+  "main": "app.js",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MateuszZalew/slider.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MateuszZalew/slider/issues"
+  },
+  "homepage": "https://github.com/MateuszZalew/slider",
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
+  }
+}
