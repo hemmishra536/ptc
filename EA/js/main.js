@@ -1,6 +1,18 @@
 // 'js/mian.js'
 
 
+			$(document).keydown(function(event) {
+				switch(event.code) {
+					case "ArrowRight":
+						$('.w-slider-arrow-right').trigger('tap');
+						break
+
+						case "ArrowLeft":
+						$('.w-slider-arrow-left').trigger('tap');
+						break
+				}
+			}
+		
 
 function updateImage(sliderValue) {
 
