@@ -1,10 +1,22 @@
 // 'js/mian.js'
 
-		
+
 
 function updateImage(sliderValue) {
 
 document.getElementById("image").src =
+	
+document.onkeydown = (e)=>{
+	switch(e,keyCode){
+		case 37: // left
+		prev();
+			break;
+			case 39: // right
+		next();
+			break;
+	}
+};
+
 
 
 "img" + sliderValue + ".jpg"; // Update image based on slider value
