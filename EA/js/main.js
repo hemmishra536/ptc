@@ -1,18 +1,4 @@
 // 'js/mian.js'
-document.addEventListener('keydown', function(e){
-
-const slider = document.getElementById('slider');
-
-if (e.keyCode == 39) { // right arrow
- slider.value = +slider.value + +slider.step;
-
-}else if (e.keyCode == 37) { // left arrow
-
-slider. value = +slider.value - +slider.step;
-} 
-
-updateImage(slider.value);
-});
 
 
 
