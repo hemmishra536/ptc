@@ -4,18 +4,7 @@
 
 function updateImage(sliderValue) {
 
-document.getElementById("image").src =
-	
-document.onkeydown = (e)=>{
-	switch(e,keyCode){
-		case 37: // left
-		prev();
-			break;
-			case 39: // right
-		next();
-			break;
-	}
-};
+
 
 
 
